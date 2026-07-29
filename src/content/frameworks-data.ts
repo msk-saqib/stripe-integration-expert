@@ -14,7 +14,7 @@ export const FRAMEWORKS_DATA: FrameworkContent[] = [
   {
     slug: "nextjs",
     name: "Next.js",
-    metaTitle: "Stripe Integration for Next.js | Ledger & Co.",
+    metaTitle: "Stripe Integration for Next.js",
     metaDescription:
       "Expert Stripe integration for Next.js 13–15 — App Router, Server Actions, webhooks, and Payment Element done right.",
     heroHeadline: "Stripe Integration for Next.js, Done Right",
@@ -36,7 +36,7 @@ export const FRAMEWORKS_DATA: FrameworkContent[] = [
   {
     slug: "react",
     name: "React",
-    metaTitle: "Stripe Integration for React | Ledger & Co.",
+    metaTitle: "Stripe Integration for React",
     metaDescription:
       "Stripe Elements and Payment Element integration for React SPAs — clean state management, no framework lock-in.",
     heroHeadline: "Stripe Integration for React Applications",
@@ -58,7 +58,7 @@ export const FRAMEWORKS_DATA: FrameworkContent[] = [
   {
     slug: "react-native",
     name: "React Native",
-    metaTitle: "Stripe Integration for React Native | Ledger & Co.",
+    metaTitle: "Stripe Integration for React Native",
     metaDescription:
       "Native Stripe SDK integration for React Native — Apple Pay, Google Pay, and Payment Sheet done correctly.",
     heroHeadline: "Stripe Integration for React Native Apps",
@@ -80,7 +80,7 @@ export const FRAMEWORKS_DATA: FrameworkContent[] = [
   {
     slug: "flutter",
     name: "Flutter",
-    metaTitle: "Stripe Integration for Flutter | Ledger & Co.",
+    metaTitle: "Stripe Integration for Flutter",
     metaDescription:
       "Stripe integration for Flutter apps — native Payment Sheet, Apple Pay, and Google Pay via the official Flutter SDK.",
     heroHeadline: "Stripe Integration for Flutter Apps",
@@ -102,7 +102,7 @@ export const FRAMEWORKS_DATA: FrameworkContent[] = [
   {
     slug: "laravel",
     name: "Laravel",
-    metaTitle: "Stripe Integration for Laravel | Ledger & Co.",
+    metaTitle: "Stripe Integration for Laravel",
     metaDescription:
       "Stripe integration for Laravel — Cashier setup or custom API integration, webhooks, and subscription billing.",
     heroHeadline: "Stripe Integration for Laravel Applications",
@@ -124,7 +124,7 @@ export const FRAMEWORKS_DATA: FrameworkContent[] = [
   {
     slug: "nodejs",
     name: "Node.js",
-    metaTitle: "Stripe Integration for Node.js | Ledger & Co.",
+    metaTitle: "Stripe Integration for Node.js",
     metaDescription:
       "Custom Stripe API integration for Node.js backends — Checkout, Billing, Connect, and webhook infrastructure.",
     heroHeadline: "Stripe Integration for Node.js Backends",
@@ -146,7 +146,7 @@ export const FRAMEWORKS_DATA: FrameworkContent[] = [
   {
     slug: "express",
     name: "Express",
-    metaTitle: "Stripe Integration for Express.js | Ledger & Co.",
+    metaTitle: "Stripe Integration for Express.js",
     metaDescription:
       "Stripe integration for Express.js APIs — Checkout Sessions, webhook routes, and subscription billing.",
     heroHeadline: "Stripe Integration for Express.js APIs",
@@ -168,7 +168,7 @@ export const FRAMEWORKS_DATA: FrameworkContent[] = [
   {
     slug: "django",
     name: "Django",
-    metaTitle: "Stripe Integration for Django | Ledger & Co.",
+    metaTitle: "Stripe Integration for Django",
     metaDescription:
       "Stripe integration for Django — dj-stripe setup or custom integration, webhooks, and subscription billing.",
     heroHeadline: "Stripe Integration for Django Applications",
@@ -190,7 +190,7 @@ export const FRAMEWORKS_DATA: FrameworkContent[] = [
   {
     slug: "aspnet",
     name: "ASP.NET",
-    metaTitle: "Stripe Integration for ASP.NET | Ledger & Co.",
+    metaTitle: "Stripe Integration for ASP.NET",
     metaDescription:
       "Stripe integration for ASP.NET Core — Checkout, Billing, and webhook handling using the official .NET SDK.",
     heroHeadline: "Stripe Integration for ASP.NET Core",
@@ -212,7 +212,7 @@ export const FRAMEWORKS_DATA: FrameworkContent[] = [
   {
     slug: "php",
     name: "PHP",
-    metaTitle: "Stripe Integration for PHP | Ledger & Co.",
+    metaTitle: "Stripe Integration for PHP",
     metaDescription:
       "Stripe integration for plain PHP applications — Checkout, webhooks, and billing without a framework dependency.",
     heroHeadline: "Stripe Integration for PHP Applications",
@@ -234,7 +234,7 @@ export const FRAMEWORKS_DATA: FrameworkContent[] = [
   {
     slug: "ruby-on-rails",
     name: "Ruby on Rails",
-    metaTitle: "Stripe Integration for Ruby on Rails | Ledger & Co.",
+    metaTitle: "Stripe Integration for Ruby on Rails",
     metaDescription:
       "Stripe integration for Rails — Stripe gem setup, webhooks, and subscription billing following Rails conventions.",
     heroHeadline: "Stripe Integration for Ruby on Rails",

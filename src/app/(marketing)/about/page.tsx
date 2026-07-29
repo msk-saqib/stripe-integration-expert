@@ -4,7 +4,7 @@ import { SectionHeading } from "@/components/shared/section-heading";
 import { CtaBand } from "@/components/shared/cta-band";
 import { GlassCard } from "@/components/shared/glass-card";
 import { FadeIn } from "@/components/motion/fade-in";
-import { Target, Users, ShieldCheck } from "lucide-react";
+import { Target, Users, ShieldCheck, KeyRound } from "lucide-react";
 
 export const metadata: Metadata = buildMetadata({
   title: "About Us",
@@ -12,6 +12,22 @@ export const metadata: Metadata = buildMetadata({
     "Ledger & Co. is an independent team of Stripe integration specialists — not a Stripe clone, not a payment gateway, just the engineering layer done right.",
   path: "/about",
 });
+
+// TODO: replace with real team members before launch — name, headshot, and a one-line credential.
+const TEAM = [
+  {
+    name: "[Your Name]",
+    role: "[Founder / Lead Integration Engineer]",
+    bio: "[One line on your Stripe/payments background — years of experience, notable integrations, prior roles.]",
+  },
+];
+
+// TODO: confirm these practices are accurate before launch, then remove this comment.
+const SECURITY_PRACTICES = [
+  "We request restricted API keys scoped to only the permissions an engagement needs, never full secret-key access.",
+  "Credentials are shared through [1Password / your secrets tool of choice] and never sent over email or chat.",
+  "An NDA is available on request before any account access is shared.",
+];
 
 const VALUES = [
   {
@@ -73,13 +89,44 @@ export default function AboutPage() {
         </div>
       </section>
 
+      <section className="mx-auto max-w-7xl px-6 py-24 md:px-8 md:py-32">
+        <SectionHeading eyebrow="Who You'd Work With" title="The Team" />
+        <div className="mt-14 grid gap-6 md:grid-cols-3">
+          {TEAM.map((member) => (
+            <GlassCard key={member.name} className="h-full p-6">
+              <div className="h-16 w-16 rounded-full bg-muted" aria-hidden />
+              <h3 className="mt-4 text-lg font-semibold">{member.name}</h3>
+              <p className="text-sm font-medium text-accent">{member.role}</p>
+              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                {member.bio}
+              </p>
+            </GlassCard>
+          ))}
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-3xl px-6 pb-24 md:px-8 md:pb-32">
+        <SectionHeading
+          eyebrow="Handling Your Credentials"
+          title="How We Treat Your Stripe Keys"
+        />
+        <ul className="mt-10 space-y-4">
+          {SECURITY_PRACTICES.map((practice) => (
+            <li key={practice} className="flex items-start gap-3">
+              <KeyRound className="mt-0.5 h-5 w-5 shrink-0 text-accent" />
+              <span className="text-sm leading-relaxed text-foreground/90">{practice}</span>
+            </li>
+          ))}
+        </ul>
+      </section>
+
       <CtaBand
         title="Want to Work With Us?"
         description="Tell us what you're building and we'll scope it within 24 hours."
         primaryHref="/book-a-consultation"
         primaryLabel="Book a Free Consultation"
-        secondaryHref="/case-studies"
-        secondaryLabel="See Our Work"
+        secondaryHref="/services"
+        secondaryLabel="See Our Services"
       />
     </>
   );

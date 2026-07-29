@@ -17,7 +17,7 @@ export function HeroSection() {
         <FadeIn>
           <span className="inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-white/5 px-3 py-1 font-mono text-xs font-medium uppercase tracking-widest text-accent">
             <ShieldCheck className="h-3.5 w-3.5" />
-            Certified Stripe Integration Partners
+            Independent Stripe Integration Specialists
           </span>
           <h1 className="mt-6 text-4xl font-semibold leading-[1.05] tracking-tight text-ink-foreground md:text-6xl">
             Stripe Integrations Built by People Who Ship Them Every Day.
@@ -31,12 +31,12 @@ export function HeroSection() {
               Book a Free Consultation
             </CtaButton>
             <CtaButton
-              href="/case-studies"
+              href="/services"
               variant="secondary"
               size="lg"
               className="border-white/15 bg-transparent text-ink-foreground hover:bg-white/5"
             >
-              View Our Work
+              Explore Our Services
             </CtaButton>
           </div>
           <div className="mt-10 flex flex-wrap items-center justify-center gap-6 text-sm text-ink-muted">

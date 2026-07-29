@@ -3,7 +3,7 @@ import { fontHeading, fontBody, fontMono } from "@/lib/fonts";
 import { buildOrganizationSchema } from "@/lib/seo/structured-data";
 import "./globals.css";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://ledgerandco.example.com";
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://stripe-expert.com";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     template: "%s | Ledger & Co.",
   },
   description:
-    "Certified Stripe integration partners for SaaS, marketplaces, and e-commerce. Checkout, Billing, Connect, and custom Stripe development — done right the first time.",
+    "Independent Stripe integration specialists for SaaS, marketplaces, and e-commerce. Checkout, Billing, Connect, and custom Stripe development — done right the first time.",
   manifest: "/manifest.json",
 };
 

@@ -12,7 +12,7 @@ interface FaqItem {
 
 export function FaqAccordion({ items }: { items: readonly FaqItem[] }) {
   return (
-    <Accordion className="w-full divide-y divide-border">
+    <Accordion className="w-full divide-y divide-border" hiddenUntilFound>
       {items.map((item) => (
         <AccordionItem key={item.question} value={item.question} className="py-2">
           <AccordionTrigger className="py-4 text-base font-medium">

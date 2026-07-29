@@ -75,7 +75,6 @@ export const MAIN_NAV = [
   { name: "Services", href: "/services" },
   { name: "Platforms", href: "/platforms" },
   { name: "Industries", href: "/industries" },
-  { name: "Case Studies", href: "/case-studies" },
   { name: "Blog", href: "/blog" },
   { name: "Pricing", href: "/pricing" },
 ] as const;
@@ -83,7 +82,6 @@ export const MAIN_NAV = [
 export const FOOTER_LINKS = {
   Company: [
     { name: "About", href: "/about" },
-    { name: "Case Studies", href: "/case-studies" },
     { name: "Blog", href: "/blog" },
     { name: "Contact", href: "/contact" },
   ],

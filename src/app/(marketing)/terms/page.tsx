@@ -26,7 +26,7 @@ export default function TermsPage() {
           affiliated with, endorsed by, or sponsored by Stripe, Inc.
         </p>
         <h2 className="text-lg font-semibold text-foreground">Contact</h2>
-        <p>Questions about these terms can be sent to hello@ledgerandco.example.com.</p>
+        <p>Questions about these terms can be sent to zeeshankhanaptech@gmail.com.</p>
       </div>
     </section>
   );

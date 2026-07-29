@@ -46,3 +46,6 @@ next-env.d.ts
 /public/robots.txt
 /public/manifest.json
 
+
+.vercel
+.env*

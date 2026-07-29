@@ -10,7 +10,7 @@ import {
   getPostsByCategory,
 } from "@/lib/content/blog";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://ledgerandco.example.com";
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://stripe-expert.com";
 
 interface CategoryPageProps {
   params: Promise<{ category: string }>;

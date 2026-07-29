@@ -14,7 +14,7 @@ export const CMS_DATA: CmsContent[] = [
   {
     slug: "shopify",
     name: "Shopify",
-    metaTitle: "Stripe Integration for Shopify | Ledger & Co.",
+    metaTitle: "Stripe Integration for Shopify",
     metaDescription:
       "Custom Stripe integration for Shopify beyond the default Shopify Payments plugin — Connect marketplaces, custom checkouts, and more.",
     heroHeadline: "Stripe Integration for Shopify, Beyond the Default Plugin",
@@ -36,7 +36,7 @@ export const CMS_DATA: CmsContent[] = [
   {
     slug: "woocommerce",
     name: "WooCommerce",
-    metaTitle: "Stripe Integration for WooCommerce | Ledger & Co.",
+    metaTitle: "Stripe Integration for WooCommerce",
     metaDescription:
       "Custom Stripe integration for WooCommerce — beyond the standard Stripe plugin, including Connect and custom billing logic.",
     heroHeadline: "Stripe Integration for WooCommerce, Custom-Built",
@@ -58,7 +58,7 @@ export const CMS_DATA: CmsContent[] = [
   {
     slug: "magento",
     name: "Magento",
-    metaTitle: "Stripe Integration for Magento | Ledger & Co.",
+    metaTitle: "Stripe Integration for Magento",
     metaDescription:
       "Stripe integration for Magento/Adobe Commerce — custom payment methods, subscriptions, and multi-store configurations.",
     heroHeadline: "Stripe Integration for Magento / Adobe Commerce",
@@ -80,7 +80,7 @@ export const CMS_DATA: CmsContent[] = [
   {
     slug: "bigcommerce",
     name: "BigCommerce",
-    metaTitle: "Stripe Integration for BigCommerce | Ledger & Co.",
+    metaTitle: "Stripe Integration for BigCommerce",
     metaDescription:
       "Stripe integration for BigCommerce stores needing more than the built-in payment gateway options.",
     heroHeadline: "Stripe Integration for BigCommerce",
@@ -102,7 +102,7 @@ export const CMS_DATA: CmsContent[] = [
   {
     slug: "webflow",
     name: "Webflow",
-    metaTitle: "Stripe Integration for Webflow | Ledger & Co.",
+    metaTitle: "Stripe Integration for Webflow",
     metaDescription:
       "Custom Stripe payment integration for Webflow sites — Checkout, Payment Links, and backend logic Webflow can't handle alone.",
     heroHeadline: "Stripe Integration for Webflow Sites",
@@ -124,7 +124,7 @@ export const CMS_DATA: CmsContent[] = [
   {
     slug: "wordpress",
     name: "WordPress",
-    metaTitle: "Stripe Integration for WordPress | Ledger & Co.",
+    metaTitle: "Stripe Integration for WordPress",
     metaDescription:
       "Custom Stripe payment integration for WordPress — beyond basic plugins, including subscriptions and custom checkout flows.",
     heroHeadline: "Stripe Integration for WordPress Sites",
@@ -146,7 +146,7 @@ export const CMS_DATA: CmsContent[] = [
   {
     slug: "wix",
     name: "Wix",
-    metaTitle: "Stripe Integration for Wix | Ledger & Co.",
+    metaTitle: "Stripe Integration for Wix",
     metaDescription:
       "Stripe payment integration for Wix sites using Wix's Velo custom code platform.",
     heroHeadline: "Stripe Integration for Wix Sites",

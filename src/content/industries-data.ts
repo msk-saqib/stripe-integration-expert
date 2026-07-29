@@ -14,7 +14,7 @@ export const INDUSTRIES_DATA: IndustryContent[] = [
   {
     slug: "saas",
     name: "SaaS",
-    metaTitle: "Stripe Integration for SaaS | Ledger & Co.",
+    metaTitle: "Stripe Integration for SaaS",
     metaDescription:
       "Stripe integration built for SaaS — subscription billing, upgrades/downgrades, dunning, and self-serve customer portals.",
     heroHeadline: "Stripe Integration for SaaS Products",
@@ -36,7 +36,7 @@ export const INDUSTRIES_DATA: IndustryContent[] = [
   {
     slug: "marketplace",
     name: "Marketplace",
-    metaTitle: "Stripe Integration for Marketplaces | Ledger & Co.",
+    metaTitle: "Stripe Integration for Marketplaces",
     metaDescription:
       "Stripe Connect integration for two-sided marketplaces — split payments, seller payouts, and compliant onboarding.",
     heroHeadline: "Stripe Integration for Marketplace Platforms",
@@ -58,7 +58,7 @@ export const INDUSTRIES_DATA: IndustryContent[] = [
   {
     slug: "healthcare",
     name: "Healthcare",
-    metaTitle: "Stripe Integration for Healthcare | Ledger & Co.",
+    metaTitle: "Stripe Integration for Healthcare",
     metaDescription:
       "Stripe integration for healthcare and healthtech platforms — compliant payment flows for patient billing and telehealth.",
     heroHeadline: "Stripe Integration for Healthcare Platforms",
@@ -80,7 +80,7 @@ export const INDUSTRIES_DATA: IndustryContent[] = [
   {
     slug: "education",
     name: "Education",
-    metaTitle: "Stripe Integration for EdTech | Ledger & Co.",
+    metaTitle: "Stripe Integration for EdTech",
     metaDescription:
       "Stripe integration for education platforms — course payments, cohort billing, and institutional invoicing.",
     heroHeadline: "Stripe Integration for Education Platforms",
@@ -102,7 +102,7 @@ export const INDUSTRIES_DATA: IndustryContent[] = [
   {
     slug: "food-delivery",
     name: "Food Delivery",
-    metaTitle: "Stripe Integration for Food Delivery Platforms | Ledger & Co.",
+    metaTitle: "Stripe Integration for Food Delivery Platforms",
     metaDescription:
       "Stripe Connect integration for food delivery and on-demand platforms — restaurant payouts, driver payments, and split fees.",
     heroHeadline: "Stripe Integration for Food Delivery Platforms",
@@ -124,7 +124,7 @@ export const INDUSTRIES_DATA: IndustryContent[] = [
   {
     slug: "travel",
     name: "Travel",
-    metaTitle: "Stripe Integration for Travel Platforms | Ledger & Co.",
+    metaTitle: "Stripe Integration for Travel Platforms",
     metaDescription:
       "Stripe integration for travel booking platforms — deposits, installment payments, and multi-currency handling.",
     heroHeadline: "Stripe Integration for Travel Booking Platforms",
@@ -146,7 +146,7 @@ export const INDUSTRIES_DATA: IndustryContent[] = [
   {
     slug: "events",
     name: "Events",
-    metaTitle: "Stripe Integration for Event Ticketing | Ledger & Co.",
+    metaTitle: "Stripe Integration for Event Ticketing",
     metaDescription:
       "Stripe integration for event ticketing platforms — timed sales, capacity limits, and organizer payouts.",
     heroHeadline: "Stripe Integration for Event Ticketing Platforms",
@@ -168,7 +168,7 @@ export const INDUSTRIES_DATA: IndustryContent[] = [
   {
     slug: "finance",
     name: "Finance",
-    metaTitle: "Stripe Integration for Fintech | Ledger & Co.",
+    metaTitle: "Stripe Integration for Fintech",
     metaDescription:
       "Stripe integration for fintech platforms — Financial Connections, Identity, and compliance-aware architecture.",
     heroHeadline: "Stripe Integration for Fintech Platforms",
@@ -190,7 +190,7 @@ export const INDUSTRIES_DATA: IndustryContent[] = [
   {
     slug: "real-estate",
     name: "Real Estate",
-    metaTitle: "Stripe Integration for Real Estate | Ledger & Co.",
+    metaTitle: "Stripe Integration for Real Estate",
     metaDescription:
       "Stripe integration for real estate platforms — rent collection, deposits, and large-value ACH/bank transfer payments.",
     heroHeadline: "Stripe Integration for Real Estate Platforms",
@@ -212,7 +212,7 @@ export const INDUSTRIES_DATA: IndustryContent[] = [
   {
     slug: "logistics",
     name: "Logistics",
-    metaTitle: "Stripe Integration for Logistics Platforms | Ledger & Co.",
+    metaTitle: "Stripe Integration for Logistics Platforms",
     metaDescription:
       "Stripe integration for logistics and freight platforms — invoicing, B2B payment terms, and multi-party payouts.",
     heroHeadline: "Stripe Integration for Logistics Platforms",

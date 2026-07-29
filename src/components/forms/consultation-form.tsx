@@ -105,6 +105,16 @@ export function ConsultationForm() {
 
   return (
     <div>
+      <noscript>
+        <p className="mb-8 rounded-lg border border-border bg-muted px-4 py-3 text-sm text-foreground">
+          This form needs JavaScript to walk through the steps. With JavaScript disabled,
+          email us directly at{" "}
+          <a href="mailto:zeeshankhanaptech@gmail.com" className="font-medium underline">
+            zeeshankhanaptech@gmail.com
+          </a>{" "}
+          and we&apos;ll get back to you.
+        </p>
+      </noscript>
       <div className="mb-8 flex items-center gap-2" aria-hidden>
         {STEPS.map((label, i) => (
           <div key={label} className="flex flex-1 items-center gap-2">

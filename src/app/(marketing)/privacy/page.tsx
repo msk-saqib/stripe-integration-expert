@@ -28,7 +28,7 @@ export default function PrivacyPage() {
           opted in — send newsletter updates.
         </p>
         <h2 className="text-lg font-semibold text-foreground">Contact</h2>
-        <p>Questions about this policy can be sent to hello@ledgerandco.example.com.</p>
+        <p>Questions about this policy can be sent to zeeshankhanaptech@gmail.com.</p>
       </div>
     </section>
   );

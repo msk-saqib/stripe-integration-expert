@@ -7,10 +7,12 @@ import { Loader2, Check } from "lucide-react";
 import { newsletterSchema, type NewsletterFormValues } from "@/lib/validations/newsletter";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
 
 export function NewsletterForm({ className }: { className?: string }) {
   const [success, setSuccess] = useState(false);
+  const consentNote = (
+    <p className="mt-2 text-xs text-ink-muted">No spam, unsubscribe anytime.</p>
+  );
 
   const {
     register,
@@ -39,28 +41,27 @@ export function NewsletterForm({ className }: { className?: string }) {
   }
 
   return (
-    <form
-      onSubmit={handleSubmit(onSubmit)}
-      className={cn("flex flex-col gap-2 sm:flex-row", className)}
-      noValidate
-    >
-      <div className="flex-1">
-        <Input
-          type="email"
-          placeholder="you@company.com"
-          aria-label="Email address"
-          {...register("email")}
-        />
-        {errors.email && (
-          <p role="alert" className="mt-1 text-xs text-destructive">
-            {errors.email.message}
-          </p>
-        )}
-      </div>
-      <Button type="submit" disabled={isSubmitting} className="cursor-pointer">
-        {isSubmitting && <Loader2 className="h-4 w-4 animate-spin" />}
-        Subscribe
-      </Button>
-    </form>
+    <div className={className}>
+      <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-2 sm:flex-row" noValidate>
+        <div className="flex-1">
+          <Input
+            type="email"
+            placeholder="you@company.com"
+            aria-label="Email address"
+            {...register("email")}
+          />
+          {errors.email && (
+            <p role="alert" className="mt-1 text-xs text-destructive">
+              {errors.email.message}
+            </p>
+          )}
+        </div>
+        <Button type="submit" disabled={isSubmitting} className="cursor-pointer">
+          {isSubmitting && <Loader2 className="h-4 w-4 animate-spin" />}
+          Subscribe
+        </Button>
+      </form>
+      {consentNote}
+    </div>
   );
 }

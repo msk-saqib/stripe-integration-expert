@@ -32,7 +32,7 @@ export default function ContactPage() {
         <div className="mt-10 space-y-4">
           <div className="flex items-center gap-3 text-sm">
             <Mail className="h-4 w-4 text-accent" />
-            <span>hello@ledgerandco.example.com</span>
+            <span>zeeshankhanaptech@gmail.com</span>
           </div>
           <div className="flex items-center gap-3 text-sm">
             <Clock className="h-4 w-4 text-accent" />

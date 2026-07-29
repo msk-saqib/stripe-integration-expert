@@ -22,8 +22,8 @@ export default function ConsultationConfirmationPage() {
         estimate in your inbox within 24 hours.
       </p>
       <div className="mt-8 flex gap-4">
-        <CtaButton href="/case-studies" variant="secondary">
-          See Our Work
+        <CtaButton href="/services" variant="secondary">
+          Explore Our Services
         </CtaButton>
         <CtaButton href="/">Back to Home</CtaButton>
       </div>

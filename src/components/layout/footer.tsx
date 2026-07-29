@@ -12,7 +12,7 @@ export function Footer() {
               Ledger<span className="text-accent">&</span>Co.
             </Link>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-ink-muted">
-              Certified Stripe integration partners for SaaS, marketplaces, and e-commerce.
+              Independent Stripe integration specialists for SaaS, marketplaces, and e-commerce.
             </p>
             <div className="mt-6 max-w-xs">
               <p className="font-mono text-xs font-medium uppercase tracking-widest text-ink-muted">

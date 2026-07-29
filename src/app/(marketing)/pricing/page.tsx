@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { buildMetadata } from "@/lib/seo/metadata";
+import { buildFaqPageSchema } from "@/lib/seo/structured-data";
 import { SectionHeading } from "@/components/shared/section-heading";
 import { PricingTable } from "@/components/shared/pricing-table";
 import { FaqAccordion } from "@/components/shared/faq-accordion";
@@ -31,8 +32,14 @@ const PRICING_FAQS = [
 ];
 
 export default function PricingPage() {
+  const faqSchema = buildFaqPageSchema(PRICING_FAQS);
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <section className="mx-auto max-w-3xl px-6 pt-24 text-center md:px-8 md:pt-32">
         <span className="font-mono text-xs font-medium uppercase tracking-widest text-accent">
           Pricing
@@ -48,6 +55,9 @@ export default function PricingPage() {
 
       <section className="mx-auto max-w-7xl px-6 py-24 md:px-8 md:py-32">
         <PricingTable />
+        <p className="mt-8 text-center text-sm text-muted-foreground">
+          All prices in USD. International clients are billed in USD regardless of location.
+        </p>
       </section>
 
       <section className="mx-auto max-w-3xl px-6 pb-24 md:px-8 md:pb-32">

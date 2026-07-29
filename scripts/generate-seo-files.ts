@@ -16,9 +16,8 @@ import { CMS_DATA } from "../src/content/cms-data";
 import { INDUSTRIES_DATA } from "../src/content/industries-data";
 import { BLOG_POSTS } from "../src/content/blog-posts";
 import { BLOG_CATEGORIES } from "../src/content/blog-categories";
-import { CASE_STUDIES } from "../src/content/case-studies-data";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://ledgerandco.example.com";
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://stripe-expert.com";
 const PUBLIC_DIR = resolve(__dirname, "..", "public");
 const now = new Date().toISOString();
 
@@ -71,12 +70,6 @@ const industriesXml = wrapUrlset(
   INDUSTRIES_DATA.map((i) => urlEntry(`${SITE_URL}/industries/${i.slug}`, 0.6, "monthly")),
 );
 
-// ---- sitemap-case-studies.xml ----
-const caseStudiesXml = wrapUrlset([
-  urlEntry(`${SITE_URL}/case-studies`, 0.7, "monthly"),
-  ...CASE_STUDIES.map((study) => urlEntry(`${SITE_URL}/case-studies/${study.slug}`, 0.6, "monthly")),
-]);
-
 // ---- sitemap-blog.xml ----
 const MIN_POSTS_FOR_INDEXABLE_TAG = 4;
 const tagCounts = new Map<string, number>();
@@ -100,7 +93,6 @@ const sitemapIndex = `<?xml version="1.0" encoding="UTF-8"?>\n<sitemapindex xmln
   "sitemap-services.xml",
   "sitemap-platforms.xml",
   "sitemap-industries.xml",
-  "sitemap-case-studies.xml",
   "sitemap-blog.xml",
 ]
   .map(
@@ -116,7 +108,7 @@ const robotsTxt = `User-agent: *\nAllow: /\nDisallow: /api/\nDisallow: /contact/
 const manifest = {
   name: "Ledger & Co. — Stripe Integration Experts",
   short_name: "Ledger & Co.",
-  description: "Certified Stripe integration partners for SaaS, marketplaces, and e-commerce.",
+  description: "Independent Stripe integration specialists for SaaS, marketplaces, and e-commerce.",
   start_url: "/",
   display: "standalone",
   background_color: "#0a0e1a",
@@ -129,9 +121,8 @@ writeFileSync(resolve(PUBLIC_DIR, "sitemap-core.xml"), coreXml);
 writeFileSync(resolve(PUBLIC_DIR, "sitemap-services.xml"), servicesXml);
 writeFileSync(resolve(PUBLIC_DIR, "sitemap-platforms.xml"), platformsXml);
 writeFileSync(resolve(PUBLIC_DIR, "sitemap-industries.xml"), industriesXml);
-writeFileSync(resolve(PUBLIC_DIR, "sitemap-case-studies.xml"), caseStudiesXml);
 writeFileSync(resolve(PUBLIC_DIR, "sitemap-blog.xml"), blogXml);
 writeFileSync(resolve(PUBLIC_DIR, "robots.txt"), robotsTxt);
 writeFileSync(resolve(PUBLIC_DIR, "manifest.json"), JSON.stringify(manifest, null, 2));
 
-console.log("Generated: sitemap.xml (+6 sub-sitemaps), robots.txt, manifest.json");
+console.log("Generated: sitemap.xml (+5 sub-sitemaps), robots.txt, manifest.json");
