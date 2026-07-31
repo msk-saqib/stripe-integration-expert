@@ -29,7 +29,7 @@ export function CoreServicesSection() {
         <SectionHeading
           eyebrow="Core Stripe Services"
           title="Every Stripe Integration Service, In-House"
-          description="34 services across 6 categories — from a single Checkout page to a full multi-party marketplace."
+          description="34 services across 6 categories, from a single Checkout page to a full multi-party marketplace."
         />
 
         <StaggerContainer className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3">

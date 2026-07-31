@@ -3,7 +3,7 @@ import { buildMetadata } from "@/lib/seo/metadata";
 
 export const metadata: Metadata = buildMetadata({
   title: "Privacy Policy",
-  description: "How Ledger & Co. collects, uses, and protects your data.",
+  description: "How Stripe Experts collects, uses, and protects your data.",
   path: "/privacy",
 });
 
@@ -15,7 +15,7 @@ export default function PrivacyPage() {
 
       <div className="prose prose-slate mt-10 max-w-none space-y-6 text-sm leading-relaxed text-foreground/90">
         <p>
-          [Placeholder — replace with counsel-reviewed copy before launch.] This
+          [Placeholder: replace with counsel-reviewed copy before launch.] This
           page will describe what personal data is collected via our contact,
           consultation, and newsletter forms, how it is stored, who it is shared
           with (e.g. CRM/email providers), and how users can request deletion.
@@ -24,11 +24,11 @@ export default function PrivacyPage() {
         <p>Name, email, company, and project details submitted through our forms.</p>
         <h2 className="text-lg font-semibold text-foreground">How We Use It</h2>
         <p>
-          To respond to inquiries, scope consultation requests, and — where
-          opted in — send newsletter updates.
+          To respond to inquiries, scope consultation requests, and, where
+          opted in, send newsletter updates.
         </p>
         <h2 className="text-lg font-semibold text-foreground">Contact</h2>
-        <p>Questions about this policy can be sent to zeeshankhanaptech@gmail.com.</p>
+        <p>Questions about this policy can be sent to stripeexpertdev@gmail.com.</p>
       </div>
     </section>
   );

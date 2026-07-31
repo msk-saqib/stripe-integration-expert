@@ -122,7 +122,7 @@ export default async function BlogPostPage({ params }: PostPageProps) {
               Stripe insights, monthly
             </p>
             <p className="mt-2 text-sm text-muted-foreground">
-              One email a month — no spam, unsubscribe anytime.
+              One email a month, no spam, unsubscribe anytime.
             </p>
             <NewsletterForm className="mt-4" />
           </div>

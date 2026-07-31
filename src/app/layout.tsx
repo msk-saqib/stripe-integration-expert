@@ -8,12 +8,17 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://stripe-experts.com
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Ledger & Co. — Stripe Integration Experts",
-    template: "%s | Ledger & Co.",
+    default: "Stripe Experts | Trusted Stripe Integration Services",
+    template: "%s | Stripe Experts",
   },
   description:
-    "Independent Stripe integration specialists for SaaS, marketplaces, and e-commerce. Checkout, Billing, Connect, and custom Stripe development — done right the first time.",
+    "Trusted Stripe integration services for SaaS, marketplaces, and e-commerce. Checkout, Billing, Connect, and custom Stripe development, done right the first time.",
   manifest: "/manifest.json",
+  icons: {
+    icon: "/stripe-experts-logo.png",
+    shortcut: "/stripe-experts-logo.png",
+    apple: "/stripe-experts-logo.png",
+  },
 };
 
 export default function RootLayout({

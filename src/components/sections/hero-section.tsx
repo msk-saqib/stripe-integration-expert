@@ -17,14 +17,15 @@ export function HeroSection() {
         <FadeIn>
           <span className="inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-white/5 px-3 py-1 font-mono text-xs font-medium uppercase tracking-widest text-accent">
             <ShieldCheck className="h-3.5 w-3.5" />
-            Independent Stripe Integration Specialists
+            Trusted Stripe Integration Experts
           </span>
           <h1 className="mt-6 text-4xl font-semibold leading-[1.05] tracking-tight text-ink-foreground md:text-6xl">
-            Stripe Integrations Built by People Who Ship Them Every Day.
+            Expert Stripe Integration Services for SaaS, Marketplaces & eCommerce
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-ink-muted md:text-lg">
-            Checkout, Billing, Connect, and everything in between — architected,
-            tested, and launched by a team that only does Stripe.
+            We build secure, scalable Stripe integrations, from Checkout and Billing
+            to Connect, subscriptions, webhooks, and custom payment flows, so you can
+            launch faster with confidence.
           </p>
           <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <CtaButton href="/book-a-consultation" size="lg" showArrow>

@@ -73,7 +73,7 @@ export default async function BlogCategoryPage({ params }: CategoryPageProps) {
           </div>
         ) : (
           <p className="text-center text-sm text-muted-foreground">
-            No posts in this category yet — check back soon.
+            No posts in this category yet. Check back soon.
           </p>
         )}
       </section>

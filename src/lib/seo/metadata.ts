@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-const SITE_NAME = "Ledger & Co.";
+const SITE_NAME = "Stripe Experts";
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://stripe-experts.com";
 
 interface BuildMetadataOptions {

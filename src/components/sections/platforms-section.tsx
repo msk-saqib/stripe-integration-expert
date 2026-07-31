@@ -10,7 +10,7 @@ export function PlatformsSection() {
         <SectionHeading
           eyebrow="Supported Platforms"
           title="We Integrate With Whatever You've Already Built"
-          description="No rip-and-replace required — Stripe integrated correctly on top of your existing stack."
+          description="No rip-and-replace required. Stripe integrated correctly on top of your existing stack."
         />
 
         <div className="mt-14 space-y-10">

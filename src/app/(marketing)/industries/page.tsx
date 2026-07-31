@@ -8,7 +8,7 @@ import { getAllIndustries } from "@/lib/content/industries";
 export const metadata: Metadata = buildMetadata({
   title: "Industries We Serve",
   description:
-    "Stripe integration built for your vertical's payment realities — SaaS, marketplaces, healthcare, education, and more.",
+    "Stripe integration built for your vertical's payment realities: SaaS, marketplaces, healthcare, education, and more.",
   path: "/industries",
 });
 
@@ -47,7 +47,7 @@ export default function IndustriesHubPage() {
 
       <CtaBand
         title="Don't See Your Industry Listed?"
-        description="Stripe's flexible enough for almost any vertical — tell us what you're building."
+        description="Stripe's flexible enough for almost any vertical, tell us what you're building."
         primaryHref="/book-a-consultation"
         primaryLabel="Book a Free Consultation"
       />

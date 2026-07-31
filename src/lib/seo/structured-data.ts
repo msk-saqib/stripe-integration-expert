@@ -37,7 +37,7 @@ export function buildServiceSchema({
     url,
     provider: {
       "@type": "Organization",
-      name: "Ledger & Co.",
+      name: "Stripe Experts",
       url: siteUrl,
     },
     areaServed: "Worldwide",
@@ -75,7 +75,7 @@ export function buildArticleSchema({
     },
     publisher: {
       "@type": "Organization",
-      name: "Ledger & Co.",
+      name: "Stripe Experts",
       url: siteUrl,
     },
   };
@@ -85,7 +85,7 @@ export function buildOrganizationSchema(siteUrl: string) {
   return {
     "@context": "https://schema.org",
     "@type": "Organization",
-    name: "Ledger & Co.",
+    name: "Stripe Experts",
     url: siteUrl,
     description:
       "Independent Stripe integration partner for SaaS, marketplaces, and e-commerce.",

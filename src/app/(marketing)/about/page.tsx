@@ -9,7 +9,7 @@ import { Target, Users, ShieldCheck, KeyRound } from "lucide-react";
 export const metadata: Metadata = buildMetadata({
   title: "About Us",
   description:
-    "Ledger & Co. is an independent team of Stripe integration specialists — not a Stripe clone, not a payment gateway, just the engineering layer done right.",
+    "Stripe Experts is an independent team of Stripe integration specialists: not a Stripe clone, not a payment gateway, just the engineering layer done right.",
   path: "/about",
 });
 
@@ -18,7 +18,7 @@ const TEAM = [
   {
     name: "[Your Name]",
     role: "[Founder / Lead Integration Engineer]",
-    bio: "[One line on your Stripe/payments background — years of experience, notable integrations, prior roles.]",
+    bio: "[One line on your Stripe/payments background: years of experience, notable integrations, prior roles.]",
   },
 ];
 
@@ -57,14 +57,14 @@ export default function AboutPage() {
         <div className="mx-auto max-w-3xl px-6 text-center md:px-8">
           <FadeIn>
             <span className="font-mono text-xs font-medium uppercase tracking-widest text-accent">
-              About Ledger & Co.
+              About Stripe Experts
             </span>
             <h1 className="mt-4 text-4xl font-semibold leading-[1.1] tracking-tight text-ink-foreground md:text-5xl">
               We Only Build on Stripe. That&apos;s the Whole Pitch.
             </h1>
             <p className="mt-6 text-base leading-relaxed text-ink-muted md:text-lg">
               Most agencies treat payments as one line item in a broader dev contract.
-              We treat it as the entire job — because a broken webhook or a
+              We treat it as the entire job, because a broken webhook or a
               misconfigured Connect account costs real revenue, not just engineering time.
             </p>
           </FadeIn>

@@ -20,7 +20,7 @@ const POINTS = [
     icon: Layers,
     stat: "34 Services",
     title: "Full-Stack Coverage",
-    description: "Payments, billing, marketplaces, and compliance — one team, not five vendors.",
+    description: "Payments, billing, marketplaces, and compliance: one team, not five vendors.",
   },
   {
     icon: HeartHandshake,
@@ -36,7 +36,7 @@ export function WhyChooseUsSection() {
       <SectionHeading
         eyebrow="Why Choose Us"
         title="The Stripe Layer, Handled End to End"
-        description="Most agencies bolt Stripe onto a broader dev contract. This is all we do — which means fewer surprises in production."
+        description="Most agencies bolt Stripe onto a broader dev contract. This is all we do, which means fewer surprises in production."
       />
 
       <StaggerContainer className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">

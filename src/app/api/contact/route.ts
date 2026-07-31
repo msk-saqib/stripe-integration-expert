@@ -15,12 +15,13 @@ export async function POST(request: Request) {
 
   try {
     await sendLeadEmail({
-      subject: `New contact form message from ${parsed.data.name}`,
-      replyTo: parsed.data.email,
+      subject: `New contact form message from ${parsed.data.firstName} ${parsed.data.lastName}`,
+      replyTo: parsed.data.workEmail,
       fields: {
-        Name: parsed.data.name,
-        Email: parsed.data.email,
+        Name: `${parsed.data.firstName} ${parsed.data.lastName}`,
+        "Work Email": parsed.data.workEmail,
         Company: parsed.data.company || "—",
+        Topic: parsed.data.topic,
         Message: parsed.data.message,
       },
     });

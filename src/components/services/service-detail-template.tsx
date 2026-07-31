@@ -119,7 +119,7 @@ export function ServiceDetailTemplate({
 
       <CtaBand
         title={service.ctaLabel}
-        description="Get a scoped estimate within 24 hours — no obligation to proceed."
+        description="Get a scoped estimate within 24 hours, no obligation to proceed."
         primaryHref="/book-a-consultation"
         primaryLabel="Book a Free Consultation"
         secondaryHref={`/services/${category.slug}`}

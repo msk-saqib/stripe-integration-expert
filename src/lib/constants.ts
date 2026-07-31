@@ -76,14 +76,13 @@ export const MAIN_NAV = [
   { name: "Platforms", href: "/platforms" },
   { name: "Industries", href: "/industries" },
   { name: "Blog", href: "/blog" },
-  { name: "Pricing", href: "/pricing" },
 ] as const;
 
 export const FOOTER_LINKS = {
   Company: [
     { name: "About", href: "/about" },
     { name: "Blog", href: "/blog" },
-    { name: "Contact", href: "/contact" },
+    { name: "Contact", href: "/book-a-consultation" },
   ],
   Services: [
     { name: "All Services", href: "/services" },
@@ -186,30 +185,6 @@ export const PROCESS_STEPS = [
   },
 ] as const;
 
-export const TESTIMONIALS = [
-  {
-    quote:
-      "They rebuilt our entire billing system on Stripe in three weeks. Failed-payment churn dropped almost immediately.",
-    name: "Priya Nair",
-    role: "CTO",
-    company: "Fieldnote",
-  },
-  {
-    quote:
-      "We needed a Connect marketplace that wouldn't fall over at scale. This was the first team that actually understood the account-type tradeoffs.",
-    name: "Marcus Webb",
-    role: "Founder",
-    company: "Craftly",
-  },
-  {
-    quote:
-      "Our webhook handling was silently dropping events for months before they found it. Fixed in a day.",
-    name: "Elena Torres",
-    role: "Head of Engineering",
-    company: "Runway Health",
-  },
-] as const;
-
 export const FAQS = [
   {
     question: "How long does a typical Stripe integration take?",
@@ -219,12 +194,12 @@ export const FAQS = [
   {
     question: "Do you work with our existing tech stack?",
     answer:
-      "Yes — we integrate across Next.js, React, React Native, Flutter, Laravel, Node.js, Django, and more, plus CMS platforms like Shopify, WooCommerce, and Webflow.",
+      "Yes, we integrate across Next.js, React, React Native, Flutter, Laravel, Node.js, Django, and more, plus CMS platforms like Shopify, WooCommerce, and Webflow.",
   },
   {
     question: "Can you fix an integration you didn't originally build?",
     answer:
-      "Yes, this is one of our most common engagements — webhook failures, billing discrepancies, and checkout bugs on integrations built by other teams.",
+      "Yes, this is one of our most common engagements: webhook failures, billing discrepancies, and checkout bugs on integrations built by other teams.",
   },
   {
     question: "Do you help with PCI compliance?",
@@ -235,46 +210,5 @@ export const FAQS = [
     question: "What does a free consultation actually include?",
     answer:
       "A 30-minute call to understand your current setup and goals, followed by a written scope and estimate within 24 hours. No obligation to proceed.",
-  },
-] as const;
-
-export const PRICING_TIERS = [
-  {
-    name: "Starter Integration",
-    price: "$2,500+",
-    description: "A single, focused Stripe integration — Checkout, Payment Links, or a similar scoped build.",
-    features: [
-      "One core Stripe product integrated",
-      "Test + production mode setup",
-      "Webhook handling included",
-      "2 weeks of post-launch support",
-    ],
-    highlighted: false,
-  },
-  {
-    name: "Growth Integration",
-    price: "$8,000+",
-    description: "Full billing or marketplace build — the most common engagement for funded startups.",
-    features: [
-      "Stripe Billing or Connect architecture",
-      "Multiple payment methods",
-      "Tax, Radar, and compliance setup",
-      "30 days of post-launch support",
-      "Dedicated integration engineer",
-    ],
-    highlighted: true,
-  },
-  {
-    name: "Enterprise",
-    price: "Custom",
-    description: "Complex multi-party platforms, migrations, or ongoing support retainers.",
-    features: [
-      "Custom Connect architecture",
-      "Migration from another provider",
-      "Ongoing support retainer available",
-      "Security & PCI compliance review",
-      "Priority SLA",
-    ],
-    highlighted: false,
   },
 ] as const;

@@ -8,7 +8,7 @@ import { getAllCategories, getAllServices } from "@/lib/content/services";
 export const metadata: Metadata = buildMetadata({
   title: "Stripe Integration Services",
   description:
-    "Every Stripe integration service, in-house — Checkout, Billing, Connect, payment methods, compliance, and developer support across 34 services.",
+    "Every Stripe integration service, in-house: Checkout, Billing, Connect, payment methods, compliance, and developer support across 34 services.",
   path: "/services",
 });
 
@@ -26,7 +26,7 @@ export default function ServicesHubPage() {
           Every Stripe Integration Service, In-House
         </h1>
         <p className="mt-6 text-base leading-relaxed text-muted-foreground md:text-lg">
-          {services.length} services across {categories.length} categories — from a single
+          {services.length} services across {categories.length} categories, from a single
           Checkout page to a full multi-party marketplace.
         </p>
       </section>

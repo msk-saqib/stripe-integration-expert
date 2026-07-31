@@ -35,11 +35,9 @@ export default function FaqPage() {
 
       <CtaBand
         title="Didn't Find Your Answer?"
-        description="Ask us directly — we respond within one business day."
-        primaryHref="/contact"
+        description="Ask us directly. We respond within one business day."
+        primaryHref="/book-a-consultation"
         primaryLabel="Contact Us"
-        secondaryHref="/book-a-consultation"
-        secondaryLabel="Book a Consultation"
       />
     </>
   );

@@ -33,8 +33,6 @@ function wrapUrlset(entries: string[]) {
 const CORE_PATHS = [
   "",
   "/about",
-  "/pricing",
-  "/contact",
   "/faq",
   "/book-a-consultation",
   "/services",
@@ -102,18 +100,24 @@ const sitemapIndex = `<?xml version="1.0" encoding="UTF-8"?>\n<sitemapindex xmln
   .join("\n")}\n</sitemapindex>\n`;
 
 // ---- robots.txt ----
-const robotsTxt = `User-agent: *\nAllow: /\nDisallow: /api/\nDisallow: /contact/thank-you\nDisallow: /book-a-consultation/confirmation\n\nSitemap: ${SITE_URL}/sitemap.xml\n`;
+const robotsTxt = `User-agent: *\nAllow: /\nDisallow: /api/\nDisallow: /book-a-consultation/thank-you\nDisallow: /book-a-consultation/confirmation\n\nSitemap: ${SITE_URL}/sitemap.xml\n`;
 
 // ---- manifest.json ----
 const manifest = {
-  name: "Ledger & Co. — Stripe Integration Experts",
-  short_name: "Ledger & Co.",
-  description: "Independent Stripe integration specialists for SaaS, marketplaces, and e-commerce.",
+  name: "Stripe Experts | Independent Stripe Integration Specialists",
+  short_name: "Stripe Experts",
+  description: "Trusted Stripe integration services for SaaS, marketplaces, and e-commerce.",
   start_url: "/",
   display: "standalone",
   background_color: "#0a0e1a",
   theme_color: "#0a0e1a",
-  icons: [],
+  icons: [
+    {
+      src: "/stripe-experts-logo.png",
+      sizes: "1254x1254",
+      type: "image/png",
+    },
+  ],
 };
 
 writeFileSync(resolve(PUBLIC_DIR, "sitemap.xml"), sitemapIndex);

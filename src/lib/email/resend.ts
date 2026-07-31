@@ -1,14 +1,11 @@
 import { Resend } from "resend";
 
-// Resend sandbox mode only delivers to the account's own signup address until a sending
-// domain is verified (resend.com/domains). Once stripe-experts.com is verified, set
-// LEAD_INBOX to zeeshankhanaptech@gmail.com — until then it falls back to the verified
-// test address so leads keep landing somewhere instead of silently failing.
-const LEAD_INBOX = process.env.LEAD_INBOX ?? "muhammadsaqibkhan575@gmail.com";
+// stripe-experts.com is verified in Resend, so leads can deliver to any inbox.
+const LEAD_INBOX = process.env.LEAD_INBOX ?? "stripeexpertdev@gmail.com";
 
-// Resend's shared test sender works without a verified domain. Once stripe-experts.com
-// is verified in the Resend dashboard, set EMAIL_FROM to an address on that domain instead.
-const FROM_ADDRESS = process.env.EMAIL_FROM ?? "Ledger & Co. <onboarding@resend.dev>";
+// stripe-experts.com is verified in Resend, so send from an address on that domain
+// instead of the shared onboarding@resend.dev test sender.
+const FROM_ADDRESS = process.env.EMAIL_FROM ?? "Stripe Experts <hello@stripe-experts.com>";
 
 function getClient() {
   const apiKey = process.env.RESEND_API_KEY;

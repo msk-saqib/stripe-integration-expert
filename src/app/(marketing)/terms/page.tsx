@@ -3,7 +3,7 @@ import { buildMetadata } from "@/lib/seo/metadata";
 
 export const metadata: Metadata = buildMetadata({
   title: "Terms of Service",
-  description: "Terms governing use of the Ledger & Co. website and services.",
+  description: "Terms governing use of the Stripe Experts website and services.",
   path: "/terms",
 });
 
@@ -15,18 +15,18 @@ export default function TermsPage() {
 
       <div className="prose prose-slate mt-10 max-w-none space-y-6 text-sm leading-relaxed text-foreground/90">
         <p>
-          [Placeholder — replace with counsel-reviewed copy before launch.] This
+          [Placeholder: replace with counsel-reviewed copy before launch.] This
           page will cover acceptable use of this website, service-engagement
           terms (scope, payment, liability limitations), and intellectual
           property.
         </p>
         <h2 className="text-lg font-semibold text-foreground">Independent Partner Disclosure</h2>
         <p>
-          Ledger & Co. is an independent Stripe integration partner and is not
+          Stripe Experts is an independent Stripe integration partner and is not
           affiliated with, endorsed by, or sponsored by Stripe, Inc.
         </p>
         <h2 className="text-lg font-semibold text-foreground">Contact</h2>
-        <p>Questions about these terms can be sent to zeeshankhanaptech@gmail.com.</p>
+        <p>Questions about these terms can be sent to stripeexpertdev@gmail.com.</p>
       </div>
     </section>
   );

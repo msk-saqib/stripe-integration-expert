@@ -5,12 +5,12 @@ import { CheckCircle2 } from "lucide-react";
 
 export const metadata: Metadata = buildMetadata({
   title: "Message Sent",
-  description: "Thanks for reaching out — we'll be in touch within one business day.",
-  path: "/contact/thank-you",
+  description: "Thanks for reaching out. We'll be in touch within one business day.",
+  path: "/book-a-consultation/thank-you",
   noIndex: true,
 });
 
-export default function ContactThankYouPage() {
+export default function ConsultationThankYouPage() {
   return (
     <section className="mx-auto flex max-w-xl flex-col items-center px-6 py-32 text-center md:px-8">
       <CheckCircle2 className="h-12 w-12 text-accent" />

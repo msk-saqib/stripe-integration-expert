@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { FOOTER_LINKS } from "@/lib/constants";
-import { NewsletterForm } from "@/components/forms/newsletter-form";
 
 export function Footer() {
   return (
@@ -9,17 +8,11 @@ export function Footer() {
         <div className="grid grid-cols-2 gap-10 md:grid-cols-5">
           <div className="col-span-2 md:col-span-1">
             <Link href="/" className="font-heading text-lg font-semibold tracking-tight">
-              Ledger<span className="text-accent">&</span>Co.
+              Stripe <span className="text-accent">Experts</span>
             </Link>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-ink-muted">
-              Independent Stripe integration specialists for SaaS, marketplaces, and e-commerce.
+              Trusted Stripe integration services for SaaS, marketplaces, and e-commerce.
             </p>
-            <div className="mt-6 max-w-xs">
-              <p className="font-mono text-xs font-medium uppercase tracking-widest text-ink-muted">
-                Stripe insights, monthly
-              </p>
-              <NewsletterForm className="mt-3" />
-            </div>
           </div>
 
           {Object.entries(FOOTER_LINKS).map(([heading, links]) => (
@@ -44,7 +37,7 @@ export function Footer() {
         </div>
 
         <div className="mt-16 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-8 text-xs text-ink-muted sm:flex-row">
-          <p>© {new Date().getFullYear()} Ledger & Co. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Stripe Experts. All rights reserved.</p>
           <p>Not affiliated with Stripe, Inc. Independent Stripe integration partner.</p>
         </div>
       </div>
