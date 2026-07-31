@@ -17,7 +17,7 @@ import { INDUSTRIES_DATA } from "../src/content/industries-data";
 import { BLOG_POSTS } from "../src/content/blog-posts";
 import { BLOG_CATEGORIES } from "../src/content/blog-categories";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://stripe-expert.com";
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://stripe-experts.com";
 const PUBLIC_DIR = resolve(__dirname, "..", "public");
 const now = new Date().toISOString();
 

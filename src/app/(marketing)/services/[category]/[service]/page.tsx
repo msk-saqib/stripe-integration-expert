@@ -5,7 +5,7 @@ import { buildServiceSchema, buildFaqPageSchema } from "@/lib/seo/structured-dat
 import { ServiceDetailTemplate } from "@/components/services/service-detail-template";
 import { getAllServices, getCategoryBySlug, getServiceBySlug } from "@/lib/content/services";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://stripe-expert.com";
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://stripe-experts.com";
 
 interface ServicePageProps {
   params: Promise<{ category: string; service: string }>;

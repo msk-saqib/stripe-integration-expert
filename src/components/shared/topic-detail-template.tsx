@@ -7,7 +7,7 @@ import { FadeIn } from "@/components/motion/fade-in";
 import { getServiceBySlug, type ServiceContent } from "@/lib/content/services";
 import { getPostsByTag } from "@/lib/content/blog";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://stripe-expert.com";
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://stripe-experts.com";
 
 interface TopicDetailTemplateProps {
   breadcrumbItems: { name: string; href: string }[];

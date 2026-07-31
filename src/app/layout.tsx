@@ -3,7 +3,7 @@ import { fontHeading, fontBody, fontMono } from "@/lib/fonts";
 import { buildOrganizationSchema } from "@/lib/seo/structured-data";
 import "./globals.css";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://stripe-expert.com";
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://stripe-experts.com";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
