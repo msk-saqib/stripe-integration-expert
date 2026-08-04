@@ -1,3 +1,23 @@
+import {
+  CONTACT_EMAIL,
+  LOGO_SIZE,
+  LOGO_URL,
+  SITE_DESCRIPTION,
+  SITE_NAME,
+  SITE_URL,
+  SOCIAL_PROFILE_URLS,
+  absoluteUrl,
+} from "@/lib/seo/site";
+
+/**
+ * Stable @id values so every schema on the site references one Organization node
+ * and one WebSite node, rather than re-declaring anonymous copies per page.
+ */
+export const ORGANIZATION_ID = `${SITE_URL}/#organization`;
+export const WEBSITE_ID = `${SITE_URL}/#website`;
+
+const organizationRef = { "@id": ORGANIZATION_ID };
+
 interface FaqItem {
   question: string;
   answer: string;
@@ -22,12 +42,10 @@ export function buildServiceSchema({
   name,
   description,
   url,
-  siteUrl,
 }: {
   name: string;
   description: string;
   url: string;
-  siteUrl: string;
 }) {
   return {
     "@context": "https://schema.org",
@@ -35,11 +53,8 @@ export function buildServiceSchema({
     name,
     description,
     url,
-    provider: {
-      "@type": "Organization",
-      name: "Stripe Experts",
-      url: siteUrl,
-    },
+    serviceType: name,
+    provider: organizationRef,
     areaServed: "Worldwide",
   };
 }
@@ -48,18 +63,22 @@ export function buildArticleSchema({
   title,
   description,
   url,
-  siteUrl,
   authorName,
   publishedAt,
   updatedAt,
+  image,
+  section,
+  keywords,
 }: {
   title: string;
   description: string;
   url: string;
-  siteUrl: string;
   authorName: string;
   publishedAt: string;
   updatedAt: string;
+  image?: string;
+  section?: string;
+  keywords?: readonly string[];
 }) {
   return {
     "@context": "https://schema.org",
@@ -67,28 +86,78 @@ export function buildArticleSchema({
     headline: title,
     description,
     url,
+    mainEntityOfPage: { "@type": "WebPage", "@id": url },
     datePublished: publishedAt,
     dateModified: updatedAt,
+    ...(image ? { image: [image] } : {}),
+    ...(section ? { articleSection: section } : {}),
+    ...(keywords && keywords.length > 0 ? { keywords: keywords.join(", ") } : {}),
     author: {
       "@type": "Person",
       name: authorName,
     },
-    publisher: {
-      "@type": "Organization",
-      name: "Stripe Experts",
-      url: siteUrl,
-    },
+    publisher: organizationRef,
+    isPartOf: { "@id": WEBSITE_ID },
   };
 }
 
-export function buildOrganizationSchema(siteUrl: string) {
+/**
+ * Emitted once, in the root layout. Uses @graph so the Organization and WebSite
+ * nodes are declared together and can reference each other by @id.
+ */
+export function buildSiteSchema() {
   return {
     "@context": "https://schema.org",
-    "@type": "Organization",
-    name: "Stripe Experts",
-    url: siteUrl,
-    description:
-      "Independent Stripe integration partner for SaaS, marketplaces, and e-commerce.",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": ORGANIZATION_ID,
+        name: SITE_NAME,
+        url: SITE_URL,
+        description: SITE_DESCRIPTION,
+        email: CONTACT_EMAIL,
+        logo: {
+          "@type": "ImageObject",
+          "@id": `${SITE_URL}/#logo`,
+          url: LOGO_URL,
+          contentUrl: LOGO_URL,
+          width: LOGO_SIZE,
+          height: LOGO_SIZE,
+          caption: SITE_NAME,
+        },
+        image: { "@id": `${SITE_URL}/#logo` },
+        ...(SOCIAL_PROFILE_URLS.length > 0 ? { sameAs: [...SOCIAL_PROFILE_URLS] } : {}),
+        contactPoint: {
+          "@type": "ContactPoint",
+          contactType: "sales",
+          email: CONTACT_EMAIL,
+          url: absoluteUrl("/book-a-consultation"),
+          availableLanguage: ["English"],
+        },
+        knowsAbout: [
+          "Stripe Checkout",
+          "Stripe Billing",
+          "Stripe Connect",
+          "Payment Intents",
+          "Stripe webhooks",
+          "PCI DSS compliance",
+          "Subscription billing",
+          "Marketplace payments",
+        ],
+        // Not affiliated with Stripe, Inc. — stated on-page in the footer/terms too.
+        disambiguatingDescription:
+          "Independent Stripe integration partner. Not affiliated with, endorsed by, or sponsored by Stripe, Inc.",
+      },
+      {
+        "@type": "WebSite",
+        "@id": WEBSITE_ID,
+        name: SITE_NAME,
+        url: SITE_URL,
+        description: SITE_DESCRIPTION,
+        publisher: organizationRef,
+        inLanguage: "en",
+      },
+    ],
   };
 }
 

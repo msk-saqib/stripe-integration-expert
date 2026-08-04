@@ -19,7 +19,9 @@ export interface BlogPost {
   body: ContentBlock[];
 }
 
-const AUTHOR = { name: "Priya Nair", role: "Senior Stripe Integration Engineer" };
+// Single byline for every post — also published as the Article schema author and
+// the article:author OG tag, so it has to be a real person.
+const AUTHOR = { name: "Zeeshan", role: "Founder" };
 
 export const BLOG_POSTS: BlogPost[] = [
   {

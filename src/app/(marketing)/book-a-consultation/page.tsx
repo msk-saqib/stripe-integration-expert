@@ -20,6 +20,10 @@ const REASSURANCE_POINTS = [
 export default function BookAConsultationPage() {
   return (
     <section className="mx-auto max-w-6xl px-6 py-24 md:px-8 md:py-32">
+      {/* Calendly is the only third-party origin on the site and it loads on this
+          page alone, so the connection is warmed here rather than site-wide. */}
+      <link rel="preconnect" href="https://assets.calendly.com" />
+      <link rel="preconnect" href="https://calendly.com" />
       <span className="font-mono text-xs font-medium uppercase tracking-widest text-accent">
         Free Consultation
       </span>

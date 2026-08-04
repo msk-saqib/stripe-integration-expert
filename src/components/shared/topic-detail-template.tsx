@@ -4,11 +4,10 @@ import { CtaBand } from "@/components/shared/cta-band";
 import { RelatedServicesRail } from "@/components/services/related-services-rail";
 import { RelatedPosts } from "@/components/blog/related-posts";
 import { PostContent } from "@/components/blog/post-content";
-import { FadeIn } from "@/components/motion/fade-in";
+import { RiseIn } from "@/components/motion/rise-in";
 import { getServiceBySlug, type ServiceContent } from "@/lib/content/services";
 import { getPostsByTag, type ContentBlock } from "@/lib/content/blog";
-
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://stripe-experts.com";
+import { SITE_URL } from "@/lib/seo/site";
 
 interface TopicDetailTemplateProps {
   breadcrumbItems: { name: string; href: string }[];
@@ -49,7 +48,7 @@ export function TopicDetailTemplate({
       <Breadcrumbs siteUrl={SITE_URL} items={breadcrumbItems} />
 
       <section className="mx-auto max-w-3xl px-6 pt-10 pb-16 text-center md:px-8">
-        <FadeIn>
+        <RiseIn>
           <span className="font-mono text-xs font-medium uppercase tracking-widest text-accent">
             {eyebrow}
           </span>
@@ -59,7 +58,7 @@ export function TopicDetailTemplate({
           <p className="mt-6 text-base leading-relaxed text-muted-foreground md:text-lg">
             {heroSubhead}
           </p>
-        </FadeIn>
+        </RiseIn>
       </section>
 
       <section className="bg-muted/30 py-16">

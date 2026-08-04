@@ -1,3 +1,5 @@
+import type { Metadata } from "next";
+import { buildMetadata } from "@/lib/seo/metadata";
 import { HeroSection } from "@/components/sections/hero-section";
 import { WhyChooseUsSection } from "@/components/sections/why-choose-us-section";
 import { CoreServicesSection } from "@/components/sections/core-services-section";
@@ -9,6 +11,15 @@ import { FaqSection } from "@/components/sections/faq-section";
 import { CtaBand } from "@/components/shared/cta-band";
 import { buildFaqPageSchema } from "@/lib/seo/structured-data";
 import { FAQS } from "@/lib/constants";
+
+export const metadata: Metadata = buildMetadata({
+  title: "Stripe Experts | Trusted Stripe Integration Services",
+  description:
+    "Expert Stripe integration services for SaaS, marketplaces, and eCommerce. Checkout, Billing, Connect, subscriptions, and webhooks — built secure, scalable, and right the first time.",
+  path: "/",
+  ogKicker: "Stripe Integration Specialists",
+  absoluteTitle: true,
+});
 
 export default function Home() {
   const faqSchema = buildFaqPageSchema(FAQS);

@@ -5,13 +5,12 @@ import { FaqAccordion } from "@/components/shared/faq-accordion";
 import { CtaBand } from "@/components/shared/cta-band";
 import { RelatedServicesRail } from "@/components/services/related-services-rail";
 import { RelatedPosts } from "@/components/blog/related-posts";
-import { FadeIn } from "@/components/motion/fade-in";
+import { RiseIn } from "@/components/motion/rise-in";
 import { StaggerContainer, StaggerItem } from "@/components/motion/stagger-container";
 import { INDUSTRIES } from "@/lib/constants";
 import { getRelatedServices, type CategoryContent, type ServiceContent } from "@/lib/content/services";
 import { getPostsRelatedToService } from "@/lib/content/blog";
-
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://stripe-experts.com";
+import { SITE_URL } from "@/lib/seo/site";
 
 export function ServiceDetailTemplate({
   service,
@@ -39,7 +38,7 @@ export function ServiceDetailTemplate({
       />
 
       <section className="mx-auto max-w-4xl px-6 pt-16 pb-20 text-center md:px-8">
-        <FadeIn>
+        <RiseIn>
           <span className="font-mono text-xs font-medium uppercase tracking-widest text-accent">
             {category.name}
           </span>
@@ -57,7 +56,7 @@ export function ServiceDetailTemplate({
               {service.ctaLabel}
             </Link>
           </div>
-        </FadeIn>
+        </RiseIn>
       </section>
 
       <section className="bg-muted/30 py-20">

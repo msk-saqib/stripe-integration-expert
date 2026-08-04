@@ -24,6 +24,7 @@ export async function generateMetadata({ params }: FrameworkPageProps): Promise<
     title: framework.metaTitle,
     description: framework.metaDescription,
     path: `/platforms/frameworks/${framework.slug}`,
+    ogKicker: `Stripe + ${framework.name}`,
   });
 }
 

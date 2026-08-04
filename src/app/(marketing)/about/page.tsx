@@ -3,7 +3,8 @@ import { buildMetadata } from "@/lib/seo/metadata";
 import { SectionHeading } from "@/components/shared/section-heading";
 import { CtaBand } from "@/components/shared/cta-band";
 import { GlassCard } from "@/components/shared/glass-card";
-import { FadeIn } from "@/components/motion/fade-in";
+import { RiseIn } from "@/components/motion/rise-in";
+import { cn } from "@/lib/utils";
 import { Target, Users, ShieldCheck, KeyRound } from "lucide-react";
 
 export const metadata: Metadata = buildMetadata({
@@ -13,19 +14,26 @@ export const metadata: Metadata = buildMetadata({
   path: "/about",
 });
 
-// TODO: replace with real team members before launch — name, headshot, and a one-line credential.
-const TEAM = [
+interface TeamMember {
+  name: string;
+  role: string;
+  /** Renders only when set — better an absent line than a placeholder one. */
+  bio?: string;
+}
+
+// TODO: add a headshot for each member.
+const TEAM: TeamMember[] = [
   {
-    name: "[Your Name]",
-    role: "[Founder / Lead Integration Engineer]",
-    bio: "[One line on your Stripe/payments background: years of experience, notable integrations, prior roles.]",
+    name: "Zeeshan",
+    role: "Founder",
+    bio: "Senior lead full-stack developer with 8+ years building mobile apps, websites, and payment integrations.",
   },
 ];
 
-// TODO: confirm these practices are accurate before launch, then remove this comment.
+// These are public commitments to clients — every line here must stay true of how
+// engagements actually run.
 const SECURITY_PRACTICES = [
   "We request restricted API keys scoped to only the permissions an engagement needs, never full secret-key access.",
-  "Credentials are shared through [1Password / your secrets tool of choice] and never sent over email or chat.",
   "An NDA is available on request before any account access is shared.",
 ];
 
@@ -55,7 +63,7 @@ export default function AboutPage() {
     <>
       <section className="bg-ink py-24 md:py-32">
         <div className="mx-auto max-w-3xl px-6 text-center md:px-8">
-          <FadeIn>
+          <RiseIn>
             <span className="font-mono text-xs font-medium uppercase tracking-widest text-accent">
               About Stripe Experts
             </span>
@@ -67,7 +75,7 @@ export default function AboutPage() {
               We treat it as the entire job, because a broken webhook or a
               misconfigured Connect account costs real revenue, not just engineering time.
             </p>
-          </FadeIn>
+          </RiseIn>
         </div>
       </section>
 
@@ -91,15 +99,24 @@ export default function AboutPage() {
 
       <section className="mx-auto max-w-7xl px-6 py-24 md:px-8 md:py-32">
         <SectionHeading eyebrow="Who You'd Work With" title="The Team" />
-        <div className="mt-14 grid gap-6 md:grid-cols-3">
+        {/* A lone card stretched across a 3-column grid reads as "two people left".
+            The grid only kicks in once there is more than one member. */}
+        <div
+          className={cn(
+            "mt-14 grid gap-6",
+            TEAM.length > 1 ? "md:grid-cols-3" : "max-w-md",
+          )}
+        >
           {TEAM.map((member) => (
             <GlassCard key={member.name} className="h-full p-6">
               <div className="h-16 w-16 rounded-full bg-muted" aria-hidden />
               <h3 className="mt-4 text-lg font-semibold">{member.name}</h3>
               <p className="text-sm font-medium text-accent">{member.role}</p>
-              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                {member.bio}
-              </p>
+              {member.bio && (
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                  {member.bio}
+                </p>
+              )}
             </GlassCard>
           ))}
         </div>

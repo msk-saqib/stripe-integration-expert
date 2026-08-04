@@ -1,11 +1,19 @@
 import { ImageResponse } from "next/og";
 import type { NextRequest } from "next/server";
+import { SITE_NAME } from "@/lib/seo/site";
 
 export const runtime = "edge";
 
+// Brand tokens, mirrored from globals.css (--ink / --ink-foreground / dark --accent).
+// The dark-mode accent is used because the card always renders on the ink background.
+const INK = "#0a0e1a";
+const INK_FOREGROUND = "#f8fafc";
+const INK_MUTED = "#94a3b8";
+const ACCENT = "#14b8a6";
+
 export async function GET(req: NextRequest) {
   const { searchParams } = new URL(req.url);
-  const title = (searchParams.get("title") ?? "Stripe Experts").slice(0, 120);
+  const title = (searchParams.get("title") ?? SITE_NAME).slice(0, 120);
   const kicker = searchParams.get("kicker")?.slice(0, 60);
 
   return new ImageResponse(
@@ -18,8 +26,8 @@ export async function GET(req: NextRequest) {
           flexDirection: "column",
           justifyContent: "center",
           padding: "80px",
-          background: "#0a0e1a",
-          color: "#f5f7f6",
+          background: INK,
+          color: INK_FOREGROUND,
           fontFamily: "sans-serif",
         }}
       >
@@ -38,10 +46,10 @@ export async function GET(req: NextRequest) {
               width: 10,
               height: 10,
               borderRadius: "50%",
-              background: "#3fd6c4",
+              background: ACCENT,
             }}
           />
-          STRIPE EXPERTS
+          {SITE_NAME.toUpperCase()}
         </div>
         {kicker && (
           <div
@@ -50,7 +58,7 @@ export async function GET(req: NextRequest) {
               fontSize: 22,
               textTransform: "uppercase",
               letterSpacing: "0.08em",
-              color: "#3fd6c4",
+              color: ACCENT,
             }}
           >
             {kicker}
@@ -67,8 +75,25 @@ export async function GET(req: NextRequest) {
         >
           {title}
         </div>
+        <div
+          style={{
+            marginTop: 40,
+            fontSize: 20,
+            color: INK_MUTED,
+          }}
+        >
+          stripe-experts.com
+        </div>
       </div>
     ),
-    { width: 1200, height: 630 },
+    {
+      width: 1200,
+      height: 630,
+      headers: {
+        // Card scrapers (Google, Slack, X, LinkedIn) re-fetch this far more often
+        // than it changes, and the output is a pure function of the query string.
+        "Cache-Control": "public, immutable, no-transform, max-age=31536000",
+      },
+    },
   );
 }

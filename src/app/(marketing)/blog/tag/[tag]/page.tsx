@@ -5,8 +5,7 @@ import { Breadcrumbs } from "@/components/shared/breadcrumbs";
 import { PostCard } from "@/components/blog/post-card";
 import { CtaBand } from "@/components/shared/cta-band";
 import { getAllTags, getPostsByTag, isTagIndexable } from "@/lib/content/blog";
-
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://stripe-experts.com";
+import { SITE_URL } from "@/lib/seo/site";
 
 interface TagPageProps {
   params: Promise<{ tag: string }>;
@@ -27,6 +26,7 @@ export async function generateMetadata({ params }: TagPageProps): Promise<Metada
     title: `Posts tagged "${tag}"`,
     description: `Stripe articles and guides tagged "${tag}".`,
     path: `/blog/tag/${tag}`,
+    ogKicker: "Tagged",
     noIndex: !isTagIndexable(tag),
   });
 }

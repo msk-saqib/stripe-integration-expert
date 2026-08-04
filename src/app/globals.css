@@ -58,12 +58,29 @@
 
   --animate-marquee: marquee 30s linear infinite;
 
+  /* JS-free entrance for above-the-fold content. The framer-motion FadeIn holds
+     its children at opacity:0 until hydration, which delays LCP by the whole JS
+     download+hydrate cost; this starts the moment styles apply. Use FadeIn only
+     below the fold, where the scroll trigger is the point. */
+  --animate-rise-in: rise-in 0.5s var(--ease-out-signature) both;
+
   @keyframes marquee {
     from {
       transform: translateX(0);
     }
     to {
       transform: translateX(-100%);
+    }
+  }
+
+  @keyframes rise-in {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: none;
     }
   }
 }
@@ -190,7 +207,8 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .animate-marquee {
+  .animate-marquee,
+  .animate-rise-in {
     animation: none;
   }
 }

@@ -19,8 +19,7 @@ import {
   extractHeadings,
 } from "@/lib/content/blog";
 import { getServiceBySlug, type ServiceContent } from "@/lib/content/services";
-
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://stripe-experts.com";
+import { SITE_URL, absoluteUrl, ogImageUrl, toIsoDate } from "@/lib/seo/site";
 
 interface PostPageProps {
   params: Promise<{ slug: string }>;
@@ -37,10 +36,20 @@ export async function generateMetadata({ params }: PostPageProps): Promise<Metad
   const post = getPostBySlug(slug);
   if (!post) return {};
 
+  const category = getBlogCategoryBySlug(post.category);
+
   return buildMetadata({
     title: post.title,
     description: post.metaDescription,
     path: `/blog/${post.slug}`,
+    ogKicker: category?.name,
+    article: {
+      publishedTime: toIsoDate(post.publishedAt),
+      modifiedTime: toIsoDate(post.updatedAt),
+      authors: [post.author.name],
+      section: category?.name,
+      tags: post.tags,
+    },
   });
 }
 
@@ -56,15 +65,17 @@ export default async function BlogPostPage({ params }: PostPageProps) {
     .map((s) => getServiceBySlug(s))
     .filter((s): s is ServiceContent => Boolean(s));
 
-  const url = `${SITE_URL}/blog/${post.slug}`;
+  const url = absoluteUrl(`/blog/${post.slug}`);
   const articleSchema = buildArticleSchema({
     title: post.title,
     description: post.metaDescription,
     url,
-    siteUrl: SITE_URL,
     authorName: post.author.name,
-    publishedAt: post.publishedAt,
-    updatedAt: post.updatedAt,
+    publishedAt: toIsoDate(post.publishedAt),
+    updatedAt: toIsoDate(post.updatedAt),
+    image: ogImageUrl(post.title, category?.name),
+    section: category?.name,
+    keywords: post.tags,
   });
 
   return (

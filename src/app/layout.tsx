@@ -1,31 +1,41 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { fontHeading, fontBody, fontMono } from "@/lib/fonts";
-import { buildOrganizationSchema } from "@/lib/seo/structured-data";
+import { buildSiteSchema } from "@/lib/seo/structured-data";
+import { SITE_DESCRIPTION, SITE_NAME, SITE_URL, TWITTER_HANDLE } from "@/lib/seo/site";
 import "./globals.css";
-
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://stripe-experts.com";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Stripe Experts | Trusted Stripe Integration Services",
-    template: "%s | Stripe Experts",
+    default: `${SITE_NAME} | Trusted Stripe Integration Services`,
+    template: `%s | ${SITE_NAME}`,
   },
-  description:
-    "Trusted Stripe integration services for SaaS, marketplaces, and e-commerce. Checkout, Billing, Connect, and custom Stripe development, done right the first time.",
+  description: SITE_DESCRIPTION,
+  applicationName: SITE_NAME,
+  authors: [{ name: SITE_NAME, url: SITE_URL }],
+  creator: SITE_NAME,
+  publisher: SITE_NAME,
   manifest: "/manifest.json",
+  // Google reads the homepage <link rel="icon"> and prefers a square icon that is a
+  // multiple of 48px, so /favicon.ico carries a 48x48 frame and icon-48.png is
+  // declared explicitly. Both live at stable, unhashed URLs — Googlebot caches the
+  // favicon by URL and re-fetches it far less often than the page itself.
   icons: {
     icon: [
-      { url: "/favicon.ico", sizes: "any" },
-      { url: "/icon-16.png", sizes: "16x16", type: "image/png" },
-      { url: "/icon-32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon.ico", sizes: "16x16 32x32 48x48", type: "image/x-icon" },
       { url: "/icon-48.png", sizes: "48x48", type: "image/png" },
       { url: "/icon-192.png", sizes: "192x192", type: "image/png" },
       { url: "/icon-512.png", sizes: "512x512", type: "image/png" },
     ],
     shortcut: "/favicon.ico",
-    apple: "/apple-icon.png",
+    apple: [{ url: "/apple-icon.png", sizes: "180x180", type: "image/png" }],
   },
+  ...(TWITTER_HANDLE ? { twitter: { site: TWITTER_HANDLE, creator: TWITTER_HANDLE } } : {}),
+};
+
+export const viewport: Viewport = {
+  themeColor: "#0a0e1a",
+  colorScheme: "light",
 };
 
 export default function RootLayout({
@@ -33,7 +43,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const organizationSchema = buildOrganizationSchema(SITE_URL);
+  const siteSchema = buildSiteSchema();
 
   return (
     <html
@@ -44,7 +54,7 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col bg-background text-foreground">
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(siteSchema) }}
         />
         {children}
       </body>

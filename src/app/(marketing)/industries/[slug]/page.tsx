@@ -24,6 +24,7 @@ export async function generateMetadata({ params }: IndustryPageProps): Promise<M
     title: industry.metaTitle,
     description: industry.metaDescription,
     path: `/industries/${industry.slug}`,
+    ogKicker: `Stripe for ${industry.name}`,
   });
 }
 

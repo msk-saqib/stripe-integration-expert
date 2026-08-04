@@ -9,8 +9,7 @@ import {
   getBlogCategoryBySlug,
   getPostsByCategory,
 } from "@/lib/content/blog";
-
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://stripe-experts.com";
+import { SITE_URL } from "@/lib/seo/site";
 
 interface CategoryPageProps {
   params: Promise<{ category: string }>;
@@ -31,6 +30,7 @@ export async function generateMetadata({ params }: CategoryPageProps): Promise<M
     title: category.name,
     description: category.description,
     path: `/blog/category/${category.slug}`,
+    ogKicker: "Blog Category",
   });
 }
 

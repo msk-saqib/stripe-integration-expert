@@ -1,5 +1,5 @@
 import { CtaButton } from "@/components/shared/cta-button";
-import { FadeIn } from "@/components/motion/fade-in";
+import { RiseIn } from "@/components/motion/rise-in";
 import { ShieldCheck, Star } from "lucide-react";
 
 export function HeroSection() {
@@ -14,7 +14,7 @@ export function HeroSection() {
         className="pointer-events-none absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:64px_64px]"
       />
       <div className="relative mx-auto max-w-4xl px-6 text-center md:px-8">
-        <FadeIn>
+        <RiseIn>
           <span className="inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-white/5 px-3 py-1 font-mono text-xs font-medium uppercase tracking-widest text-accent">
             <ShieldCheck className="h-3.5 w-3.5" />
             Trusted Stripe Integration Experts
@@ -54,7 +54,7 @@ export function HeroSection() {
             <span className="h-1 w-1 rounded-full bg-white/20" aria-hidden />
             <span>PCI-aware from day one</span>
           </div>
-        </FadeIn>
+        </RiseIn>
       </div>
     </section>
   );

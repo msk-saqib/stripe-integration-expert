@@ -24,6 +24,7 @@ export async function generateMetadata({ params }: CmsPageProps): Promise<Metada
     title: cms.metaTitle,
     description: cms.metaDescription,
     path: `/platforms/cms/${cms.slug}`,
+    ogKicker: `Stripe + ${cms.name}`,
   });
 }
 
