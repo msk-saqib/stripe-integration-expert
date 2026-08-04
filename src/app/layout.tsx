@@ -15,9 +15,16 @@ export const metadata: Metadata = {
     "Trusted Stripe integration services for SaaS, marketplaces, and e-commerce. Checkout, Billing, Connect, and custom Stripe development, done right the first time.",
   manifest: "/manifest.json",
   icons: {
-    icon: "/stripe-experts-logo.png",
-    shortcut: "/stripe-experts-logo.png",
-    apple: "/stripe-experts-logo.png",
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/icon-16.png", sizes: "16x16", type: "image/png" },
+      { url: "/icon-32.png", sizes: "32x32", type: "image/png" },
+      { url: "/icon-48.png", sizes: "48x48", type: "image/png" },
+      { url: "/icon-192.png", sizes: "192x192", type: "image/png" },
+      { url: "/icon-512.png", sizes: "512x512", type: "image/png" },
+    ],
+    shortcut: "/favicon.ico",
+    apple: "/apple-icon.png",
   },
 };
 
