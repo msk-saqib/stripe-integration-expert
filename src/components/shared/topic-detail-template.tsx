@@ -3,9 +3,10 @@ import { FaqAccordion } from "@/components/shared/faq-accordion";
 import { CtaBand } from "@/components/shared/cta-band";
 import { RelatedServicesRail } from "@/components/services/related-services-rail";
 import { RelatedPosts } from "@/components/blog/related-posts";
+import { PostContent } from "@/components/blog/post-content";
 import { FadeIn } from "@/components/motion/fade-in";
 import { getServiceBySlug, type ServiceContent } from "@/lib/content/services";
-import { getPostsByTag } from "@/lib/content/blog";
+import { getPostsByTag, type ContentBlock } from "@/lib/content/blog";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://stripe-experts.com";
 
@@ -15,6 +16,7 @@ interface TopicDetailTemplateProps {
   heroHeadline: string;
   heroSubhead: string;
   context: string;
+  body?: ContentBlock[];
   relevantServiceSlugs: string[];
   faqs: { question: string; answer: string }[];
   ctaTitle: string;
@@ -29,6 +31,7 @@ export function TopicDetailTemplate({
   heroHeadline,
   heroSubhead,
   context,
+  body,
   relevantServiceSlugs,
   faqs,
   ctaTitle,
@@ -64,6 +67,12 @@ export function TopicDetailTemplate({
           <p className="text-sm leading-relaxed text-foreground/90">{context}</p>
         </div>
       </section>
+
+      {body && body.length > 0 && (
+        <section className="mx-auto max-w-3xl px-6 py-16 md:px-8">
+          <PostContent body={body} />
+        </section>
+      )}
 
       <section className="mx-auto max-w-3xl px-6 py-16 md:px-8">
         <h2 className="text-xl font-semibold">Frequently Asked Questions</h2>

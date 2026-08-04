@@ -21,8 +21,8 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://stripe-experts.com
 const PUBLIC_DIR = resolve(__dirname, "..", "public");
 const now = new Date().toISOString();
 
-function urlEntry(loc: string, priority: number, changefreq: string) {
-  return `  <url>\n    <loc>${loc}</loc>\n    <lastmod>${now}</lastmod>\n    <changefreq>${changefreq}</changefreq>\n    <priority>${priority}</priority>\n  </url>`;
+function urlEntry(loc: string, priority: number, changefreq: string, lastmod: string = now) {
+  return `  <url>\n    <loc>${loc}</loc>\n    <lastmod>${lastmod}</lastmod>\n    <changefreq>${changefreq}</changefreq>\n    <priority>${priority}</priority>\n  </url>`;
 }
 
 function wrapUrlset(entries: string[]) {
@@ -82,7 +82,9 @@ const blogXml = wrapUrlset([
   urlEntry(`${SITE_URL}/blog`, 0.8, "weekly"),
   ...BLOG_CATEGORIES.map((c) => urlEntry(`${SITE_URL}/blog/category/${c.slug}`, 0.6, "monthly")),
   ...indexableTags.map((tag) => urlEntry(`${SITE_URL}/blog/tag/${tag}`, 0.4, "monthly")),
-  ...BLOG_POSTS.map((post) => urlEntry(`${SITE_URL}/blog/${post.slug}`, 0.6, "monthly")),
+  ...BLOG_POSTS.map((post) =>
+    urlEntry(`${SITE_URL}/blog/${post.slug}`, 0.6, "monthly", new Date(post.updatedAt).toISOString()),
+  ),
 ]);
 
 // ---- sitemap.xml (index) ----

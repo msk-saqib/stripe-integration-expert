@@ -50,6 +50,7 @@ export default async function CmsPage({ params }: CmsPageProps) {
         heroHeadline={cms.heroHeadline}
         heroSubhead={cms.heroSubhead}
         context={cms.context}
+        body={cms.body}
         relevantServiceSlugs={cms.relevantServices}
         faqs={cms.faqs}
         blogTag={cms.slug}

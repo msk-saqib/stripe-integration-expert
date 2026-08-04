@@ -50,6 +50,7 @@ export default async function IndustryPage({ params }: IndustryPageProps) {
         heroHeadline={industry.heroHeadline}
         heroSubhead={industry.heroSubhead}
         context={industry.context}
+        body={industry.body}
         relevantServiceSlugs={industry.relevantServices}
         faqs={industry.faqs}
         ctaTitle={`Get Started With Stripe for ${industry.name}`}

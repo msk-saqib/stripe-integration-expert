@@ -4,8 +4,10 @@
   "private": true,
   "scripts": {
     "seo:generate": "tsx scripts/generate-seo-files.ts",
+    "seo:lint-keywords": "tsx scripts/lint-keyword-coverage.ts",
+    "seo:audit-links": "tsx scripts/audit-service-link-coverage.ts",
     "predev": "npm run seo:generate",
-    "prebuild": "npm run seo:generate",
+    "prebuild": "npm run seo:generate && npm run seo:lint-keywords",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",

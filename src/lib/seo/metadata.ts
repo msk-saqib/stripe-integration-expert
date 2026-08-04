@@ -19,7 +19,7 @@ export function buildMetadata({
   noIndex = false,
 }: BuildMetadataOptions): Metadata {
   const url = `${SITE_URL}${path}`;
-  const ogImage = image ?? `${SITE_URL}/og/default.png`;
+  const ogImage = image ?? `${SITE_URL}/og?title=${encodeURIComponent(title)}`;
 
   return {
     title,

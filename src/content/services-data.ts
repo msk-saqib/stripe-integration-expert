@@ -64,7 +64,7 @@ export const SERVICES: ServiceContent[] = [
     slug: "payment-element",
     category: "core-payments",
     name: "Payment Element",
-    metaTitle: "Stripe Payment Element Integration | Custom Checkout UI",
+    metaTitle: "Stripe Payment Element Integration",
     metaDescription:
       "Build a fully custom, embedded payment form with Stripe's Payment Element — every payment method, one integration.",
     keywords: ["stripe payment element", "embedded payment form stripe", "custom stripe checkout ui"],
@@ -101,7 +101,7 @@ export const SERVICES: ServiceContent[] = [
     slug: "embedded-checkout",
     category: "core-payments",
     name: "Embedded Checkout",
-    metaTitle: "Stripe Embedded Checkout Integration Services",
+    metaTitle: "Stripe Embedded Checkout Integration",
     metaDescription:
       "Keep customers on your site with Stripe's Embedded Checkout — hosted-grade security, native on-page experience.",
     keywords: ["stripe embedded checkout", "on-page stripe checkout", "embedded checkout integration"],
@@ -137,7 +137,7 @@ export const SERVICES: ServiceContent[] = [
     slug: "payment-links",
     category: "core-payments",
     name: "Payment Links",
-    metaTitle: "Stripe Payment Links Setup & Automation Services",
+    metaTitle: "Stripe Payment Links Setup Services",
     metaDescription:
       "No-code-to-pro Stripe Payment Links — set up, automate, and connect to your invoicing and CRM workflows.",
     keywords: ["stripe payment links", "payment link automation", "stripe no-code payments"],
@@ -176,7 +176,7 @@ export const SERVICES: ServiceContent[] = [
     slug: "stripe-billing",
     category: "billing-subscriptions",
     name: "Stripe Billing",
-    metaTitle: "Stripe Billing Integration Services | Subscription Setup",
+    metaTitle: "Stripe Billing Integration Services",
     metaDescription:
       "End-to-end Stripe Billing setup — plans, proration, dunning, and revenue recognition, built to scale.",
     keywords: ["stripe billing integration", "stripe subscription setup", "stripe billing developer"],
@@ -213,7 +213,7 @@ export const SERVICES: ServiceContent[] = [
     slug: "recurring-payments",
     category: "billing-subscriptions",
     name: "Recurring Payments",
-    metaTitle: "Stripe Recurring Payments Integration | Subscription Charging",
+    metaTitle: "Stripe Recurring Payments Integration",
     metaDescription:
       "Reliable recurring payment infrastructure on Stripe — built for low churn and high uptime.",
     keywords: ["stripe recurring payments", "recurring billing integration", "subscription charging stripe"],
@@ -249,7 +249,7 @@ export const SERVICES: ServiceContent[] = [
     slug: "customer-portal",
     category: "billing-subscriptions",
     name: "Customer Portal",
-    metaTitle: "Stripe Customer Portal Setup & Customization Services",
+    metaTitle: "Stripe Customer Portal Setup Services",
     metaDescription:
       "Self-serve billing management for your customers — branded Stripe Customer Portal, fully configured.",
     keywords: ["stripe customer portal", "self-serve subscription management", "stripe billing portal setup"],
@@ -285,7 +285,7 @@ export const SERVICES: ServiceContent[] = [
     slug: "usage-billing",
     category: "billing-subscriptions",
     name: "Usage Billing",
-    metaTitle: "Stripe Usage-Based Billing Integration Services",
+    metaTitle: "Usage-Based Billing Integration",
     metaDescription:
       "Metered and usage-based pricing on Stripe — accurate, auditable, and built for complex pricing models.",
     keywords: ["stripe usage based billing", "metered billing stripe", "stripe metering integration"],
@@ -323,7 +323,7 @@ export const SERVICES: ServiceContent[] = [
     slug: "stripe-connect-standard",
     category: "connect-marketplaces",
     name: "Stripe Connect Standard",
-    metaTitle: "Stripe Connect Standard Integration Services",
+    metaTitle: "Stripe Connect Standard Integration",
     metaDescription:
       "Fast-to-launch Stripe Connect Standard integration for marketplaces that want sellers on their own Stripe accounts.",
     keywords: ["stripe connect standard integration", "stripe connect standard setup"],
@@ -431,7 +431,7 @@ export const SERVICES: ServiceContent[] = [
     slug: "marketplace-development",
     category: "connect-marketplaces",
     name: "Marketplace Development",
-    metaTitle: "Stripe Marketplace Development Services (End-to-End)",
+    metaTitle: "Stripe Marketplace Development Services",
     metaDescription:
       "Full-stack marketplace build on Stripe Connect — from architecture to launch, payments to payouts.",
     keywords: ["stripe marketplace development", "build a marketplace with stripe", "two-sided marketplace payments"],
@@ -542,7 +542,7 @@ export const SERVICES: ServiceContent[] = [
     slug: "ach",
     category: "payment-methods",
     name: "ACH",
-    metaTitle: "ACH Payments via Stripe | Bank Debit Integration",
+    metaTitle: "ACH Payments via Stripe Integration",
     metaDescription:
       "Lower-fee ACH bank payments via Stripe — ideal for high-value B2B and subscription billing.",
     keywords: ["stripe ach integration", "ach bank payments stripe", "us bank debit stripe"],
@@ -578,7 +578,7 @@ export const SERVICES: ServiceContent[] = [
     slug: "sepa",
     category: "payment-methods",
     name: "SEPA",
-    metaTitle: "SEPA Direct Debit + Stripe Integration Services",
+    metaTitle: "SEPA Direct Debit Stripe Integration",
     metaDescription:
       "SEPA Direct Debit integration via Stripe for European recurring payments and B2B billing.",
     keywords: ["stripe sepa integration", "sepa direct debit stripe", "european bank debit stripe"],
@@ -614,7 +614,7 @@ export const SERVICES: ServiceContent[] = [
     slug: "klarna",
     category: "payment-methods",
     name: "Klarna",
-    metaTitle: "Klarna + Stripe Integration Services | Buy Now, Pay Later",
+    metaTitle: "Klarna + Stripe Integration Services",
     metaDescription:
       "Add Klarna buy-now-pay-later via Stripe to increase average order value and conversion.",
     keywords: ["stripe klarna integration", "klarna buy now pay later stripe", "bnpl stripe setup"],
@@ -650,7 +650,7 @@ export const SERVICES: ServiceContent[] = [
     slug: "afterpay",
     category: "payment-methods",
     name: "Afterpay",
-    metaTitle: "Afterpay + Stripe Integration Services | Installment Payments",
+    metaTitle: "Afterpay + Stripe Integration Services",
     metaDescription:
       "Afterpay/Clearpay integration via Stripe for installment-based checkout and higher AOV.",
     keywords: ["stripe afterpay integration", "afterpay clearpay stripe setup"],
@@ -686,7 +686,7 @@ export const SERVICES: ServiceContent[] = [
     slug: "link",
     category: "payment-methods",
     name: "Link",
-    metaTitle: "Stripe Link Integration Services | One-Click Checkout",
+    metaTitle: "Stripe Link Integration Services",
     metaDescription:
       "Enable Stripe Link for returning customers — saved payment details, one-click checkout across any Stripe merchant.",
     keywords: ["stripe link integration", "stripe one click checkout", "stripe link setup"],
@@ -722,7 +722,7 @@ export const SERVICES: ServiceContent[] = [
     slug: "bank-transfers",
     category: "payment-methods",
     name: "Bank Transfers",
-    metaTitle: "Bank Transfer Payments via Stripe | Wire & Direct Debit",
+    metaTitle: "Bank Transfer Payments via Stripe",
     metaDescription:
       "Accept direct bank transfers via Stripe for large invoices, B2B deals, and international payments.",
     keywords: ["stripe bank transfer integration", "wire transfer stripe", "direct bank payment stripe"],
@@ -760,7 +760,7 @@ export const SERVICES: ServiceContent[] = [
     slug: "stripe-tax",
     category: "business-tools",
     name: "Tax",
-    metaTitle: "Stripe Tax Integration Services | Automated Tax Compliance",
+    metaTitle: "Stripe Tax Integration Services",
     metaDescription:
       "Automated sales tax, VAT, and GST calculation and filing-readiness with Stripe Tax, integrated correctly.",
     keywords: ["stripe tax integration", "automated sales tax stripe", "stripe vat setup"],
@@ -796,7 +796,7 @@ export const SERVICES: ServiceContent[] = [
     slug: "stripe-radar",
     category: "business-tools",
     name: "Radar",
-    metaTitle: "Stripe Radar Integration Services | Fraud Prevention",
+    metaTitle: "Stripe Radar Fraud Prevention Setup",
     metaDescription:
       "Custom Stripe Radar rules and fraud-prevention tuning to cut chargebacks without blocking good customers.",
     keywords: ["stripe radar integration", "stripe fraud prevention setup", "stripe radar rules"],
@@ -832,7 +832,7 @@ export const SERVICES: ServiceContent[] = [
     slug: "stripe-identity",
     category: "business-tools",
     name: "Identity",
-    metaTitle: "Stripe Identity Integration Services | KYC Verification",
+    metaTitle: "Stripe Identity Integration Services",
     metaDescription:
       "Identity verification and KYC flows with Stripe Identity — for marketplaces, fintech, and regulated platforms.",
     keywords: ["stripe identity integration", "stripe kyc verification", "stripe identity verification setup"],
@@ -904,7 +904,7 @@ export const SERVICES: ServiceContent[] = [
     slug: "financial-connections",
     category: "business-tools",
     name: "Financial Connections",
-    metaTitle: "Stripe Financial Connections Integration Services",
+    metaTitle: "Financial Connections Integration",
     metaDescription:
       "Securely link customer bank accounts for verification, underwriting, or ACH payments with Stripe Financial Connections.",
     keywords: ["stripe financial connections integration", "bank account linking stripe", "stripe plaid alternative"],
@@ -940,7 +940,7 @@ export const SERVICES: ServiceContent[] = [
     slug: "stripe-terminal",
     category: "business-tools",
     name: "Terminal",
-    metaTitle: "Stripe Terminal Integration Services | In-Person Payments",
+    metaTitle: "Stripe Terminal Integration Services",
     metaDescription:
       "In-person card payments with Stripe Terminal — POS integration, hardware setup, and unified online/offline reporting.",
     keywords: ["stripe terminal integration", "stripe pos setup", "in person stripe payments"],
@@ -978,7 +978,7 @@ export const SERVICES: ServiceContent[] = [
     slug: "api-integration",
     category: "developer-services",
     name: "API Integration",
-    metaTitle: "Stripe API Integration Services | Custom Development",
+    metaTitle: "Stripe API Integration Services",
     metaDescription:
       "Custom Stripe API integration for unique business logic — beyond what pre-built components can handle.",
     keywords: ["stripe api integration", "custom stripe development", "stripe api developer"],
@@ -1014,7 +1014,7 @@ export const SERVICES: ServiceContent[] = [
     slug: "webhooks",
     category: "developer-services",
     name: "Webhooks",
-    metaTitle: "Stripe Webhooks Integration & Debugging Services",
+    metaTitle: "Stripe Webhooks Integration Services",
     metaDescription:
       "Reliable Stripe webhook infrastructure — correctly verified, idempotent, and monitored in production.",
     keywords: ["stripe webhooks integration", "stripe webhook setup", "stripe webhook debugging"],
@@ -1050,7 +1050,7 @@ export const SERVICES: ServiceContent[] = [
     slug: "stripe-sdk",
     category: "developer-services",
     name: "Stripe SDK",
-    metaTitle: "Stripe SDK Integration Services (Web, Mobile, Server)",
+    metaTitle: "Stripe SDK Integration Services",
     metaDescription:
       "Expert Stripe SDK integration across web, iOS, Android, and server-side stacks — done right the first time.",
     keywords: ["stripe sdk integration", "stripe react native sdk", "stripe mobile sdk developer"],
@@ -1086,7 +1086,7 @@ export const SERVICES: ServiceContent[] = [
     slug: "migration",
     category: "developer-services",
     name: "Migration",
-    metaTitle: "Stripe Migration Services | Switch Payment Providers Safely",
+    metaTitle: "Stripe Migration Services",
     metaDescription:
       "Migrate from another payment provider — or an old Stripe setup — with zero downtime and no lost billing history.",
     keywords: ["stripe migration service", "migrate to stripe", "payment provider migration"],
@@ -1122,7 +1122,7 @@ export const SERVICES: ServiceContent[] = [
     slug: "bug-fixes",
     category: "developer-services",
     name: "Bug Fixes",
-    metaTitle: "Stripe Integration Bug Fix Services | Emergency Support",
+    metaTitle: "Stripe Integration Bug Fix Services",
     metaDescription:
       "Fast, expert fixes for broken Stripe integrations — webhook failures, billing errors, checkout bugs.",
     keywords: ["stripe bug fix service", "fix stripe integration", "stripe integration support"],
@@ -1158,7 +1158,7 @@ export const SERVICES: ServiceContent[] = [
     slug: "performance-optimization",
     category: "developer-services",
     name: "Performance Optimization",
-    metaTitle: "Stripe Integration Performance Optimization Services",
+    metaTitle: "Stripe Performance Optimization Services",
     metaDescription:
       "Speed up checkout load times, reduce API latency, and optimize your Stripe integration for scale.",
     keywords: ["stripe performance optimization", "stripe checkout speed", "stripe integration audit"],
@@ -1194,7 +1194,7 @@ export const SERVICES: ServiceContent[] = [
     slug: "pci-compliance",
     category: "developer-services",
     name: "PCI Compliance",
-    metaTitle: "PCI Compliance Services for Stripe Integrations",
+    metaTitle: "PCI Compliance for Stripe Integrations",
     metaDescription:
       "Achieve and maintain PCI DSS compliance for your Stripe integration — SAQ guidance, architecture review, documentation.",
     keywords: ["pci compliance stripe", "pci dss stripe integration", "stripe compliance audit"],

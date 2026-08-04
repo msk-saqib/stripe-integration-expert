@@ -50,6 +50,7 @@ export default async function FrameworkPage({ params }: FrameworkPageProps) {
         heroHeadline={framework.heroHeadline}
         heroSubhead={framework.heroSubhead}
         context={framework.context}
+        body={framework.body}
         relevantServiceSlugs={framework.relevantServices}
         faqs={framework.faqs}
         blogTag={framework.slug}
