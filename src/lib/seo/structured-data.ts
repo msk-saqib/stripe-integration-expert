@@ -59,6 +59,52 @@ export function buildServiceSchema({
   };
 }
 
+interface OfferCatalogItem {
+  name: string;
+  description: string;
+  url: string;
+}
+
+/**
+ * Emitted once on the services hub page to declare the full catalog as a single
+ * Service node with an OfferCatalog, rather than relying on 34 disconnected
+ * per-page Service schemas to imply the relationship.
+ */
+export function buildOfferCatalogSchema({
+  name,
+  description,
+  url,
+  items,
+}: {
+  name: string;
+  description: string;
+  url: string;
+  items: readonly OfferCatalogItem[];
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name,
+    description,
+    url,
+    provider: organizationRef,
+    areaServed: "Worldwide",
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name,
+      itemListElement: items.map((item) => ({
+        "@type": "Offer",
+        url: item.url,
+        itemOffered: {
+          "@type": "Service",
+          name: item.name,
+          description: item.description,
+        },
+      })),
+    },
+  };
+}
+
 export function buildArticleSchema({
   title,
   description,

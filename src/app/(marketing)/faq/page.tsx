@@ -6,7 +6,7 @@ import { CtaBand } from "@/components/shared/cta-band";
 import { FAQS } from "@/lib/constants";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Frequently Asked Questions",
+  title: "Stripe Integration FAQ",
   description:
     "Answers to common questions about Stripe integration timelines, pricing, compliance, and support.",
   path: "/faq",
@@ -26,7 +26,7 @@ export default function FaqPage() {
           FAQ
         </span>
         <h1 className="mt-4 text-4xl font-semibold leading-[1.1] tracking-tight md:text-5xl">
-          Frequently Asked Questions
+          Stripe Integration: Frequently Asked Questions
         </h1>
         <div className="mt-14">
           <FaqAccordion items={FAQS} />

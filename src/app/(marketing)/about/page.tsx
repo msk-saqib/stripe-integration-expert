@@ -8,7 +8,7 @@ import { cn } from "@/lib/utils";
 import { Target, Users, ShieldCheck, KeyRound } from "lucide-react";
 
 export const metadata: Metadata = buildMetadata({
-  title: "About Us",
+  title: "About Stripe Experts",
   description:
     "Stripe Experts is an independent team of Stripe integration specialists: not a Stripe clone, not a payment gateway, just the engineering layer done right.",
   path: "/about",

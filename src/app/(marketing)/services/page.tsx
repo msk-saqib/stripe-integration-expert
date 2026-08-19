@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
 import { buildMetadata } from "@/lib/seo/metadata";
+import { buildOfferCatalogSchema } from "@/lib/seo/structured-data";
 import { CategoryGrid } from "@/components/services/category-grid";
 import { FilterableServiceDirectory } from "@/components/services/filterable-service-directory";
 import { CtaBand } from "@/components/shared/cta-band";
 import { getAllCategories, getAllServices } from "@/lib/content/services";
+import { absoluteUrl } from "@/lib/seo/site";
 
 export const metadata: Metadata = buildMetadata({
   title: "Stripe Integration Services",
@@ -16,8 +18,24 @@ export default function ServicesHubPage() {
   const categories = getAllCategories();
   const services = getAllServices();
 
+  const offerCatalogSchema = buildOfferCatalogSchema({
+    name: "Stripe Integration Services",
+    description:
+      "Every Stripe integration service, in-house: Checkout, Billing, Connect, payment methods, compliance, and developer support.",
+    url: absoluteUrl("/services"),
+    items: services.map((service) => ({
+      name: service.name,
+      description: service.metaDescription,
+      url: absoluteUrl(`/services/${service.category}/${service.slug}`),
+    })),
+  });
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(offerCatalogSchema) }}
+      />
       <section className="mx-auto max-w-3xl px-6 pt-24 text-center md:px-8 md:pt-32">
         <span className="font-mono text-xs font-medium uppercase tracking-widest text-accent">
           Services

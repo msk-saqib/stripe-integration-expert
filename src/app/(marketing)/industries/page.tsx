@@ -6,9 +6,9 @@ import { CtaBand } from "@/components/shared/cta-band";
 import { getAllIndustries } from "@/lib/content/industries";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Industries We Serve",
+  title: "Stripe Integration by Industry",
   description:
-    "Stripe integration built for your vertical's payment realities: SaaS, marketplaces, healthcare, education, and more.",
+    "Stripe integration services built for your vertical's payment realities: SaaS, marketplaces, healthcare, education, and more.",
   path: "/industries",
 });
 
@@ -22,7 +22,7 @@ export default function IndustriesHubPage() {
           Industries
         </span>
         <h1 className="mt-4 text-4xl font-semibold leading-[1.1] tracking-tight md:text-5xl">
-          Built for Your Vertical&apos;s Payment Realities
+          Stripe Integration Built for Your Industry
         </h1>
         <p className="mt-6 text-base leading-relaxed text-muted-foreground md:text-lg">
           Every industry has different compliance, payout, and payment-method expectations.

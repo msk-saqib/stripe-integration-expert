@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { buildMetadata } from "@/lib/seo/metadata";
 import { HeroSection } from "@/components/sections/hero-section";
 import { WhyChooseUsSection } from "@/components/sections/why-choose-us-section";
+import { TestimonialsSection } from "@/components/sections/testimonials-section";
 import { CoreServicesSection } from "@/components/sections/core-services-section";
 import { IndustriesSection } from "@/components/sections/industries-section";
 import { PlatformsSection } from "@/components/sections/platforms-section";
@@ -32,6 +33,7 @@ export default function Home() {
       />
       <HeroSection />
       <WhyChooseUsSection />
+      <TestimonialsSection />
       <CoreServicesSection />
       <IndustriesSection />
       <PlatformsSection />

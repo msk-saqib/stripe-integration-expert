@@ -6,9 +6,9 @@ import { CtaBand } from "@/components/shared/cta-band";
 import { getAllFrameworks, getAllCms } from "@/lib/content/platforms";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Supported Platforms",
+  title: "Stripe Integration for Every Platform",
   description:
-    "Stripe integration across every major framework and CMS: Next.js, React, Laravel, Shopify, WordPress, and more.",
+    "Stripe integration services across every major framework and CMS: Next.js, React, Laravel, Shopify, WordPress, and more.",
   path: "/platforms",
 });
 
@@ -20,10 +20,10 @@ export default function PlatformsHubPage() {
     <>
       <section className="mx-auto max-w-3xl px-6 pt-24 text-center md:px-8 md:pt-32">
         <span className="font-mono text-xs font-medium uppercase tracking-widest text-accent">
-          Supported Platforms
+          Stripe Integration by Platform
         </span>
         <h1 className="mt-4 text-4xl font-semibold leading-[1.1] tracking-tight md:text-5xl">
-          We Integrate With Whatever You&apos;ve Already Built
+          Stripe Integration for the Stack You Already Have
         </h1>
         <p className="mt-6 text-base leading-relaxed text-muted-foreground md:text-lg">
           No rip-and-replace required. Stripe integrated correctly on top of your existing stack.
